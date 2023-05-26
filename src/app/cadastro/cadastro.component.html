@@ -1,0 +1,110 @@
+<section class="container bg-dark">
+    <form>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="inputName" class="form-label text-white">Nome</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Primeiro nome">
+            </div>
+
+            <div class="col">
+                <label for="inputLastName" class="form-label text-white">Sobrenome</label>
+                <input type="text" class="form-control" id="inputLastName" placeholder="Sobrenome">
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label text-white">Gênero</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genderRadios" id="maleRadio" value="male">
+                    <label class="form-check-label text-white" for="maleRadio">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genderRadios" id="femaleRadio" value="female">
+                    <label class="form-check-label text-white" for="femaleRadio">Feminino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genderRadios" id="femaleRadio" value="female">
+                    <label class="form-check-label text-white" for="femaleRadio">Outro</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label text-white">E-mail</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="meuexemplo@gmail.com"
+                style="max-width: 20em;">
+        </div>
+
+
+
+        <div class="mb-3">
+            <label for="inputWhatsApp" class="form-label text-white">WhatsApp</label>
+            <div class="input-group">
+                <span class="input-group-text" style="margin-right: 0.5%;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png"
+                        alt="Brazilian flag" height="20">
+                </span>
+                <input type="tel" class="form-control" id="inputWhatsAppCode" placeholder="+55"
+                    style="max-width: 4em; margin-right: 1%;">
+                <input type="tel" class="form-control" id="inputWhatsAppNumber" placeholder="(XX) X XXXX-XXXX"
+                    style="max-width: 11em">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+            <select class="form-select" id="specificSizeSelect">
+                <option selected>Escolha uma cidade...</option>
+                <option value="1">Criciúma</option>
+                <option value="2">Içara</option>
+                <option value="3">Tubarão</option>
+            </select>
+        </div>
+
+
+
+
+
+
+        <div class="mb-3">
+            <label for="inputDescription" class="form-label text-white">Descrição</label>
+            <textarea class="form-control" id="inputDescription" rows="3"
+                placeholder="Fale um pouco sobre você"></textarea>
+        </div>
+
+
+
+
+
+
+
+        <div class="mb-3">
+            <label for="inputCost" class="form-label text-white">Valor da Diária</label>
+            <div class="input-group">
+                <span class="input-group-text">R$</span>
+                <input type="number" class="form-control" id="decimal" placeholder="00,00" style="max-width: 6em">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label text-white"><a href="">Leia os termos</a></label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genderRadios">
+                    <label class="form-check-label text-white" for="maleRadio">Li e aceito todos os termos</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" style="padding-bottom: 2%;">
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </div>
+
+    </form>
+</section>
