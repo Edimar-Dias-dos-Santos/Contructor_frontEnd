@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { DestaquesComponent } from './destaques/destaques.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { SugestoesComponent } from './sugestoes/sugestoes.component';
 
 
 
@@ -23,7 +24,8 @@ import { CategoriasComponent } from './categorias/categorias.component';
     LoginComponent,
     CadastroComponent,
     DestaquesComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    SugestoesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { HomeComponent } from './home/home.component';
+import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { DestaquesComponent } from './destaques/destaques.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: "categorias",
     component: CategoriasComponent
+  },
+  {
+    path: "sugestoes",
+    component: SugestoesComponent
   }
 
 ];
