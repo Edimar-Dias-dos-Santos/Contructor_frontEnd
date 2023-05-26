@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { DestaquesComponent } from './destaques/destaques.component';
 
 
 
@@ -19,7 +20,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    DestaquesComponent
   ],
   imports: [
     BrowserModule,
