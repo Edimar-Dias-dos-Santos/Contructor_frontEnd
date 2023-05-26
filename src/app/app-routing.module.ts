@@ -1,4 +1,5 @@
 import { HomeComponent } from './home/home.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 import { DestaquesComponent } from './destaques/destaques.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: "destaques",
     component: DestaquesComponent
+  },
+  {
+    path: "categorias",
+    component: CategoriasComponent
   }
 
 ];
