@@ -3,14 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { DestaquesComponent } from './destaques/destaques.component';
-import { CategoriasComponent } from './categorias/categorias.component';
-import { SugestoesComponent } from './sugestoes/sugestoes.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { HomeComponent } from './Components/home/home.component';
+import { LoginComponent } from './Components/login/login.component';
+import { CadastroComponent } from './Components/cadastro/cadastro.component';
+import { CategoriasComponent } from './Components/categorias/categorias.component';
+import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
 
 
 
@@ -23,7 +22,6 @@ import { SugestoesComponent } from './sugestoes/sugestoes.component';
     HomeComponent,
     LoginComponent,
     CadastroComponent,
-    DestaquesComponent,
     CategoriasComponent,
     SugestoesComponent
   ],

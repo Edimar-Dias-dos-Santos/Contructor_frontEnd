@@ -1,0 +1,52 @@
+#header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background-color: #f59aee;
+}
+
+.carousel-inner {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    margin-bottom: 20px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.review-stat {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.small-ratings .fa-star {
+    color: #ffc107;
+    margin-right: 2px;
+}
