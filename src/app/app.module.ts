@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { CadastroComponent } from './Components/cadastro/cadastro.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
+import { FormUsuarioComponent } from './Components/form-usuario/form-usuario.component';
 
 
 
@@ -23,7 +24,8 @@ import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
     LoginComponent,
     CadastroComponent,
     CategoriasComponent,
-    SugestoesComponent
+    SugestoesComponent,
+    FormUsuarioComponent
   ],
   imports: [
     BrowserModule,
