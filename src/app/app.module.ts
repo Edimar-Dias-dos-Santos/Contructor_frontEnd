@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{HttpClientModule} from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './Shared/Rotas/app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -10,6 +11,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { CadastroComponent } from './Components/cadastro/cadastro.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
+import { FormUsuarioComponent } from './Components/form-usuario/form-usuario.component';
+import { PerfilComponent } from './Components/perfil/perfil.component';
 
 
 
@@ -23,9 +26,12 @@ import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
     LoginComponent,
     CadastroComponent,
     CategoriasComponent,
-    SugestoesComponent
+    SugestoesComponent,
+    FormUsuarioComponent,
+    PerfilComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
