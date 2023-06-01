@@ -1,5 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './Shared/Rotas/app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { PerfilComponent } from './Components/perfil/perfil.component';
     PerfilComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
