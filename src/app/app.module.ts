@@ -11,6 +11,7 @@ import { CadastroComponent } from './Components/cadastro/cadastro.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
 import { FormUsuarioComponent } from './Components/form-usuario/form-usuario.component';
+import { PerfilComponent } from './Components/perfil/perfil.component';
 
 
 
@@ -25,7 +26,8 @@ import { FormUsuarioComponent } from './Components/form-usuario/form-usuario.com
     CadastroComponent,
     CategoriasComponent,
     SugestoesComponent,
-    FormUsuarioComponent
+    FormUsuarioComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

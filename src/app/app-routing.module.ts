@@ -1,4 +1,5 @@
 import { HomeComponent } from './Components/home/home.component';
+import { PerfilComponent } from './Components/perfil/perfil.component';
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
 import { CadastroComponent } from './Components/cadastro/cadastro.component';
@@ -29,7 +30,13 @@ const routes: Routes = [
   {
     path: "sugestoes",
     component: SugestoesComponent
-  }
+  },
+  {
+    path: "perfil",
+    component: PerfilComponent
+  },
+
+
 
 ];
 
