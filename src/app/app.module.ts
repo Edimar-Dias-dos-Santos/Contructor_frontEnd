@@ -13,6 +13,7 @@ import { CategoriasComponent } from './Components/categorias/categorias.componen
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
 import { FormUsuarioComponent } from './forms/form-usuario/form-usuario.component';
 import { PerfilComponent } from './Components/perfil/perfil.component';
+import { TipoCadastroComponent } from './Components/tipo-cadastro/tipo-cadastro.component';
 
 
 
@@ -28,7 +29,8 @@ import { PerfilComponent } from './Components/perfil/perfil.component';
     SugestoesComponent,
     FormUsuarioComponent,
     PerfilComponent,
-    FormUsuarioComponent
+    FormUsuarioComponent,
+    TipoCadastroComponent
   ],
   imports: [
     HttpClientModule,

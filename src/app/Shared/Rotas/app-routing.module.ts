@@ -1,4 +1,5 @@
 import { HomeComponent } from '../../Components/home/home.component';
+import { TipoCadastroComponent } from 'src/app/Components/tipo-cadastro/tipo-cadastro.component';
 import { FormUsuarioComponent } from 'src/app/forms/form-usuario/form-usuario.component';
 import { PerfilComponent } from '../../Components/perfil/perfil.component';
 import { SugestoesComponent } from '../../Components/sugestoes/sugestoes.component';
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: "usuarioForm",
     component: FormUsuarioComponent
+  },
+  {
+    path: "tipoCadastro",
+    component: TipoCadastroComponent
   }
 
 ];
