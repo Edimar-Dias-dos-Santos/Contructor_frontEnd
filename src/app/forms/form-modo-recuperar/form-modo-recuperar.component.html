@@ -1,19 +1,21 @@
 <div class="container mt-5" style="padding-top: 6rem;">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form>
+            <form (ngSubmit)="setRecuperaLogin()">
                 <div class="mb-3">
                     <label for="numeroDocumento" class="form-label">Número do Documento CPF/CNPJ</label>
-                    <input type="text" class="form-control" id="numeroDocumento"
-                        placeholder="Digite o número do documento">
+                    <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento"
+                        placeholder="Digite o número do documento" [(ngModel)]="recuperaLogin.numeroDocumento" required>
                 </div>
                 <div class="mb-3">
                     <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-                    <input type="date" class="form-control" id="dataNascimento">
+                    <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"
+                        [(ngModel)]="recuperaLogin.dataNascimento" required>
                 </div>
                 <div class="mb-3">
                     <label for="ultimoNome" class="form-label">Último Nome</label>
-                    <input type="text" class="form-control" id="ultimoNome" placeholder="Digite o último nome">
+                    <input type="text" class="form-control" id="ultimoNome" name="ultimoNome"
+                        placeholder="Digite o último nome" [(ngModel)]="recuperaLogin.ultimoNome" required>
                 </div>
                 <div class="text-center mt-4">
                     <button class="button" type="submit">Próximo</button>

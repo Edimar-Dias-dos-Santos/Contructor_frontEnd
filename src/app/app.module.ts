@@ -11,10 +11,11 @@ import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './forms/login/login.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
-import { FormUsuarioComponent } from './forms/form-usuario/form-usuario.component';
 import { PerfilComponent } from './Components/perfil/perfil.component';
 import { TipoCadastroComponent } from './Components/tipo-cadastro/tipo-cadastro.component';
 import { FormModoRecuperarComponent } from './forms/form-modo-recuperar/form-modo-recuperar.component';
+import { FormUsuarioComponent } from './forms/form-usuario/form-usuario.component';
+
 
 
 
@@ -22,17 +23,16 @@ import { FormModoRecuperarComponent } from './forms/form-modo-recuperar/form-mod
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    CategoriasComponent,
     FooterComponent,
+    FormModoRecuperarComponent,
+    FormUsuarioComponent,
+    HeaderComponent,
     HomeComponent,
     LoginComponent,
-    CategoriasComponent,
-    SugestoesComponent,
-    FormUsuarioComponent,
     PerfilComponent,
-    FormUsuarioComponent,
-    TipoCadastroComponent,
-    FormModoRecuperarComponent
+    SugestoesComponent,
+    TipoCadastroComponent
   ],
   imports: [
     HttpClientModule,
