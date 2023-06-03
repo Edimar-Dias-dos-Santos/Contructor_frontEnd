@@ -8,21 +8,21 @@ import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
-  
+
+
   Usuarios: Usuario[] = [];
 
   constructor(
-    public servUsuario : ServUsuario
-  ){}
+    public servUsuario: ServUsuario
+  ) { }
 
   ngOnInit(): void {
     this.getUsuarios();
   }
 
-  getUsuarios(){
-    this.servUsuario.getUsuarios('all').subscribe(data => {
-       this.Usuarios = data;
+  getUsuarios() {
+    this.servUsuario.getUsuarios().subscribe(data => {
+      this.Usuarios = data;
     });
   }
 }

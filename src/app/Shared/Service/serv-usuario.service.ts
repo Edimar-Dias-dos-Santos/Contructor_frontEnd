@@ -8,19 +8,35 @@ import { Usuario } from '../Model/Usuario';
 })
 export class ServUsuario {
 
-  apiUrl = 'http://localhost:8080/constructor/api/usuario';
+  private apiUrl = 'http://localhost:8080/constructor/api/usuario';
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
+  constructor(private http: HttpClient) { }
 
-  constructor(
-    private httpClient: HttpClient
-  ) { }
+  // Obter todos os usuários
+  getUsuarios(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.apiUrl);
+  }
 
-  public getUsuarios(flag: string): Observable<Usuario[]> {
-    return this.httpClient.get<Usuario[]>(`${this.apiUrl}?flag=${flag}`);
+  // Obter um usuário pelo ID
+  getUsuario(id: number): Observable<Usuario> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Usuario>(url);
+  }
+
+  // Adicionar um novo usuário
+  setUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>(this.apiUrl, usuario);
+  }
+
+  // Atualizar um usuário
+  updateUsuario(usuario: Usuario): Observable<Usuario> {
+    const url = `${this.apiUrl}/${usuario.id}`;
+    return this.http.put<Usuario>(url, usuario);
+  }
+
+  // Excluir um usuário
+  deleteUsuario(id: number): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
   }
 }

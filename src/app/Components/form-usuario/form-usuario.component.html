@@ -1,37 +1,26 @@
-<div class="container">
-    <hr>
-    NOME:
-    <hr>
-
-    <input type="text">
-
-    <hr>
-    E-MAIL:
-    <hr>
-
-    <input type="text">
-
-    <hr>
-    SENHA:
-    <hr>
-
-    <input type="text">
-
-    <hr>
-    CONFIRMA SENHA:
-    <hr>
-
-    <input type="text">
-
-    <hr>
-    STATUS:
-    <hr>
-    <input type="text">
-    <hr>
-    Permissao:
-    <input type="text" name="" id="">
-
-    <br>
-    <button>post</button>
-
-</div>
+<main class="d-flex align-items-center">
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form (ngSubmit)="setUsuario()">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" placeholder="Digite seu nome" id="nome"
+                            [(ngModel)]="usuario.nome" name="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" placeholder="Digite seu telefone" id="telefone"
+                            [(ngModel)]="usuario.telefone" name="telefone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" placeholder="Digite seu e-mail" id="email"
+                            [(ngModel)]="usuario.email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
