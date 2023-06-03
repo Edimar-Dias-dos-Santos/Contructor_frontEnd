@@ -1,0 +1,13 @@
+.content {
+    height: 800px;
+    /* Apenas para criar espaço para o conteúdo */
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 20px;
+}

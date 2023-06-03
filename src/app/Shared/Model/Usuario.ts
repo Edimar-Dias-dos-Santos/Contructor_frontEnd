@@ -1,9 +1,11 @@
-export interface Usuario{
+export interface Usuario {
 
     id: number;
-    status: string;
+    permissao: string;
     nome: string;
-    email : string;
+    telefone: string;
+    email: string;
+    situacao: boolean;
     senha: string;
-    confirmaSenha: string;
 }
+

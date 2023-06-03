@@ -1,6 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import{HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './Shared/Rotas/app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,6 @@ import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
-import { CadastroComponent } from './Components/cadastro/cadastro.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
 import { FormUsuarioComponent } from './Components/form-usuario/form-usuario.component';
@@ -24,16 +24,17 @@ import { PerfilComponent } from './Components/perfil/perfil.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    CadastroComponent,
     CategoriasComponent,
     SugestoesComponent,
     FormUsuarioComponent,
-    PerfilComponent
+    PerfilComponent,
+    FormUsuarioComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
