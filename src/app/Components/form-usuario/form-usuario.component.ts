@@ -25,7 +25,6 @@ export class FormUsuarioComponent implements OnInit {
       telefone: '',
       email: '',
       situacao: false,
-      senha: ''
     };
   }
 

@@ -6,6 +6,9 @@ export interface Usuario {
     telefone: string;
     email: string;
     situacao: boolean;
-    senha: string;
 }
+
+
+
+
 
