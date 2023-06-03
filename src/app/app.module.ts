@@ -14,6 +14,7 @@ import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
 import { FormUsuarioComponent } from './forms/form-usuario/form-usuario.component';
 import { PerfilComponent } from './Components/perfil/perfil.component';
 import { TipoCadastroComponent } from './Components/tipo-cadastro/tipo-cadastro.component';
+import { FormModoRecuperarComponent } from './forms/form-modo-recuperar/form-modo-recuperar.component';
 
 
 
@@ -30,7 +31,8 @@ import { TipoCadastroComponent } from './Components/tipo-cadastro/tipo-cadastro.
     FormUsuarioComponent,
     PerfilComponent,
     FormUsuarioComponent,
-    TipoCadastroComponent
+    TipoCadastroComponent,
+    FormModoRecuperarComponent
   ],
   imports: [
     HttpClientModule,
