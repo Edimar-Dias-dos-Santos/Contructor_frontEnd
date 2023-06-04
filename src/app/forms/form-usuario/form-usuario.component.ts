@@ -21,11 +21,10 @@ export class FormUsuarioComponent implements OnInit {
   inicializarUsuario(): Usuario {
     return {
       id: 0,
-      permissao: '',
+      permissao: true,
       nome: '',
       telefone: '',
-      email: '',
-      situacao: false,
+      email: ''
     };
   }
 
