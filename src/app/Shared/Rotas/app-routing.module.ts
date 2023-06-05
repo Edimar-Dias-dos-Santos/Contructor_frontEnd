@@ -6,6 +6,7 @@ import { PerfilComponent } from '../../Components/perfil/perfil.component';
 import { SugestoesComponent } from '../../Components/sugestoes/sugestoes.component';
 import { CategoriasComponent } from '../../Components/categorias/categorias.component';
 import { LoginComponent } from '../../forms/login/login.component';
+import { FormCriacaoLoginComponent } from 'src/app/forms/form-criacao-login/form-criacao-login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -45,6 +46,10 @@ const routes: Routes = [
     path: "FormModoRecuperar",
     component: FormModoRecuperarComponent
 
+  },
+  {
+    path: "FormCriacaoLogin",
+    component: FormCriacaoLoginComponent
   }
 
 ];
