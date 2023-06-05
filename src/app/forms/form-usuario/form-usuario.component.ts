@@ -21,11 +21,10 @@ export class FormUsuarioComponent implements OnInit {
   inicializarUsuario(): Usuario {
     return {
       id: 0,
-      permissao: '',
+      permissao: true,
       nome: '',
       telefone: '',
-      email: '',
-      situacao: false,
+      email: ''
     };
   }
 
@@ -33,7 +32,7 @@ export class FormUsuarioComponent implements OnInit {
     if (this.usuario.nome && this.usuario.telefone && this.usuario.email) {
       this.servUsuario.setUsuario(this.usuario).subscribe(
         novoUsuario => {
-          // Realize as ações necessárias, como redirecionar para a próxima página
+          this.servUsuario.setUsuarioAtual(novoUsuario); // Armazena o usuário atual no serviço
           this.router.navigateByUrl('/tipoCadastro');
         },
         error => console.error(error)

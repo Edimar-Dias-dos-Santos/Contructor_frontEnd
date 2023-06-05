@@ -10,6 +10,8 @@ export class ServUsuario {
 
   private apiUrl = 'http://localhost:8080/constructor/api/usuario';
 
+  usuarioAtual: Usuario | null = null;
+
   constructor(private http: HttpClient) { }
 
   // Obter todos os usuários
@@ -38,5 +40,9 @@ export class ServUsuario {
   deleteUsuario(id: number): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete(url);
+  }
+
+  setUsuarioAtual(usuario: Usuario) {
+    this.usuarioAtual = usuario;
   }
 }
