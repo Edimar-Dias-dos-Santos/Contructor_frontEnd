@@ -42,7 +42,7 @@ export class FormModoRecuperarComponent implements OnInit {
           novoRecuperaLogin => {
             // Manipule os dados do recuperaLogin criado conforme necessário
             console.log('RecuperaLogin criado:', novoRecuperaLogin);
-            this.router.navigateByUrl('/formularioLogin'); // Redireciona para o formulário de login
+            this.router.navigateByUrl('/FormCriacaoLogin'); // Redireciona para o formulário de login
           },
           error => {
             console.log('Ocorreu um erro ao criar o login:', error);
