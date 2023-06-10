@@ -57,6 +57,7 @@ export class FormCriacaoLoginComponent implements OnInit {
       (
         novoLogin => {
           console.log('Login criado:', novoLogin);
+          this.router.navigateByUrl('/MenuFinalCadastroComponent');
         },
         error => {
           console.log('Ocorreu um erro ao criar o login:', error);
