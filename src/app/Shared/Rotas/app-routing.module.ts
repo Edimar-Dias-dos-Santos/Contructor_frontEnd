@@ -7,6 +7,7 @@ import { SugestoesComponent } from '../../Components/sugestoes/sugestoes.compone
 import { CategoriasComponent } from '../../Components/categorias/categorias.component';
 import { LoginComponent } from '../../forms/login/login.component';
 import { FormCriacaoLoginComponent } from 'src/app/forms/form-criacao-login/form-criacao-login.component';
+import { MenuFinalCadastroComponent } from 'src/app/Components/menu-final-cadastro/menu-final-cadastro.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -50,7 +51,12 @@ const routes: Routes = [
   {
     path: "FormCriacaoLogin",
     component: FormCriacaoLoginComponent
+  },
+  {
+    path: "MenuFinalCadastroComponent",
+    component: MenuFinalCadastroComponent
   }
+
 
 ];
 

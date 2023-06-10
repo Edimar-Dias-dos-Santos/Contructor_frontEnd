@@ -4,6 +4,7 @@ import { Login } from './../../Shared/Model/Login';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ExceptionDefault } from 'src/app/Shared/Messages/Exceptions';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -44,12 +45,14 @@ export class FormCriacaoLoginComponent implements OnInit {
     }
 
     if (!this.confiracaoSenha || !this.login.senha) {
-      alert('Por favor informe todos os campos');
+
+      Swal.fire('Atenção!', 'Todos os campos deveram ser preenchidos!', 'error');
       throw new ExceptionDefault('Por favor informe todos os campos');
     }
 
     if (this.confiracaoSenha != this.login.senha) {
-      alert('As senhas precisam ser iguais');
+
+      Swal.fire('Erro!', 'As senhas precisam ser iguais!', 'error');
       throw new ExceptionDefault('As senhas precisam ser iguais');
     }
 
@@ -57,9 +60,11 @@ export class FormCriacaoLoginComponent implements OnInit {
       (
         novoLogin => {
           console.log('Login criado:', novoLogin);
+          Swal.fire('Parabéns!', 'Login criado com sucesso', 'success');
+          this.router.navigateByUrl('/MenuFinalCadastroComponent');
         },
         error => {
-          console.log('Ocorreu um erro ao criar o login:', error);
+          Swal.fire('Obs!', 'Ocorreu um erro ao criar o login:', 'error');
         }
       );
   }
