@@ -1,7 +1,18 @@
 <div class="container mt-5" style="padding-top: 6rem;">
   <div class="row justify-content-center">
+
+
     <div class="col-md-6">
+
+
+      <div class="mb-3">
+        <label for="eMail" class="form-label">E-mail</label>
+        <input type="text" class="form-control" id="eMail" [value]="login.eMail" disabled>
+      </div>
+
+
       <form (ngSubmit)="setLogin()">
+
         <div class="mb-3">
           <label for="numeroDocumento" class="form-label">Digite uma senha</label>
           <input type="password" class="form-control" id="numeroDocumento" name="numeroDocumento"

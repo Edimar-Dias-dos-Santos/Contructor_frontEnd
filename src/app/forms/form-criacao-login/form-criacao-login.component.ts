@@ -33,7 +33,7 @@ export class FormCriacaoLoginComponent implements OnInit {
       id: 0,
       idUsuario: 0,
       senha: '',
-      eMail: ""
+      eMail: this.servUsuario.usuarioAtual?.email || ''
     };
   }
 
