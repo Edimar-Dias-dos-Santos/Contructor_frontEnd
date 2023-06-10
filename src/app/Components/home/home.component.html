@@ -1,43 +1,40 @@
-<div id="header" class="carousel slide" data-bs-ride="carousel" style="background-color: #bbbbbb;">
-    <div class="container d-flex align-items-center carousel-inner">
-        <div class="text-center carousel-item active" style="background-image: url('image1.jpg');">
-            <div class="my-2">
+<div class="container my-5">
 
-            </div>
-        </div>
 
-        <div class="text-center carousel-item" style="background-image: url('image2.jpg');">
-            <div class="my-2">
-
-            </div>
-        </div>
-
-        <div class="text-center carousel-item" style="background-image: url('image3.jpg');">
-            <div class="my-2">
-
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="btn-group mb-4">
+                <button class="btn btn-primary" data-filter=".pedreiro">Pedreiro</button>
+                <button class="btn btn-primary" data-filter=".marceneiro">Marceneiro</button>
+                <button class="btn btn-primary" data-filter=".pintor">Pintor</button>
+                <button class="btn btn-primary" data-filter=".eletricista">Eletricista</button>
+                <button class="btn btn-primary" data-filter=".encanador">Encanador</button>
+                <button class="btn btn-primary" data-filter=".vidraceiro">Vidraceiro</button>
+                <button class="btn btn-primary active" data-filter="*">Todos</button>
             </div>
         </div>
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#header" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#header" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
-
-
-
-<div class="container my-5 ">
     <div class="row mt-4">
-        <div class="col-md-4">
+        <div class="col-md-12">
+            <div class="btn-group mb-4">
+                <button class="btn btn-primary" data-sort-by="name" data-sort-asc="true">Ordenar A-Z</button>
+                <button class="btn btn-primary" data-sort-by="name" data-sort-asc="false">Ordenar Z-A</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+
+        <!-- cards aqui -->
+        <div class="col-md-4 pedreiro">
             <div class="card pointer" routerLink="perfil">
                 <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
                 <div class="card-body">
                     <h5 class="card-title">Pedro</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
+                    <label>Pedreiro</label>
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
                                 class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -55,6 +52,8 @@
                 </div>
             </div>
         </div>
+        <!-- Outros cards aqui -->
+
     </div>
 </div>
 <hr>
