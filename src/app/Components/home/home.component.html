@@ -1,43 +1,78 @@
-<div id="header" class="carousel slide" data-bs-ride="carousel" style="background-color: #bbbbbb;">
-    <div class="container d-flex align-items-center carousel-inner">
-        <div class="text-center carousel-item active" style="background-image: url('image1.jpg');">
-            <div class="my-2">
-
-            </div>
+<div class="carousel d-none d-md-block" style="background-color: black;">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="" class="d-block w-100" alt="Slide 1">
         </div>
-
-        <div class="text-center carousel-item" style="background-image: url('image2.jpg');">
-            <div class="my-2">
-
-            </div>
+        <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="Slide 2">
         </div>
+        <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="Slide 3">
+        </div>
+    </div>
 
-        <div class="text-center carousel-item" style="background-image: url('image3.jpg');">
-            <div class="my-2">
+    <a class="carousel-control prev" href="#" role="button">
+        <span class="carousel-control-icon">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control next" href="#" role="button">
+        <span class="carousel-control-icon">
+            <i class="fas fa-chevron-right"></i>
+        </span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+<!--banner-->
 
+
+
+<div class="container my-5">
+
+
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="btn-group mb-4 d-flex flex-wrap justify-content-between">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-primary d-none d-md-block" data-filter=".pedreiro">Pedreiro</button>
+                    <button class="btn btn-primary d-none d-md-block" data-filter=".marceneiro">Marceneiro</button>
+                    <button class="btn btn-primary d-none d-md-block" data-filter=".pintor">Pintor</button>
+                    <button class="btn btn-primary d-none d-md-block" data-filter=".eletricista">Eletricista</button>
+                    <button class="btn btn-primary d-none d-md-block" data-filter=".encanador">Encanador</button>
+                    <button class="btn btn-primary d-none d-md-block" data-filter=".vidraceiro">Vidraceiro</button>
+                    <button class="btn btn-primary d-none" data-filter="*">Todos</button>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group mb-2 d-flex">
+                        <input type="text" class="form-control form-control-sm" placeholder="Pesquisar">
+                        <button class="btn btn-outline-primary btn-sm ml-2" type="button">Buscar</button>
+                    </div>
+                </div>
+                <div class="btn-group" role="group">
+                    <button class="btn btn-primary" data-sort-by="name" data-sort-asc="true">Ordenar A-Z</button>
+                    <button class="btn btn-primary" data-sort-by="name" data-sort-asc="false">Ordenar Z-A</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#header" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#header" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
 
 
-
-<div class="container my-5 ">
     <div class="row mt-4">
-        <div class="col-md-4">
+
+        <!-- cards aqui -->
+        <div class="col-md-4" style="padding-bottom:2rem ;">
             <div class="card pointer" routerLink="perfil">
                 <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
                 <div class="card-body">
                     <h5 class="card-title">Pedro</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
                         labore et dolore magna aliqua.</p>
+                    <label>Pedreiro</label>
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
                                 class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -55,6 +90,96 @@
                 </div>
             </div>
         </div>
+        <!-- Outros cards aqui -->
+
+
+        <!-- cards aqui -->
+        <div class="col-md-4" style="padding-bottom:2rem ;">
+            <div class="card pointer" routerLink="perfil">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+                <div class="card-body">
+                    <h5 class="card-title">Pedro</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <label>Pedreiro</label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
+                                class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <div>
+                            <h5 class="review-stat">12 Viewers</h5>
+                            <div class="small-ratings">
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Outros cards aqui -->
+
+        <!-- cards aqui -->
+        <div class="col-md-4" style="padding-bottom:2rem ;">
+            <div class="card pointer" routerLink="perfil">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+                <div class="card-body">
+                    <h5 class="card-title">Pedro</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <label>Marceneiro</label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
+                                class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <div>
+                            <h5 class="review-stat">12 Viewers</h5>
+                            <div class="small-ratings">
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Outros cards aqui -->
+
+        <!-- cards aqui -->
+        <div class="col-md-4" style="padding-bottom:2rem ;">
+            <div class="card pointer" routerLink="perfil">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+                <div class="card-body">
+                    <h5 class="card-title">Pedro</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <label>Pedreiro</label>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
+                                class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <div>
+                            <h5 class="review-stat">12 Viewers</h5>
+                            <div class="small-ratings">
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                                <span class="fa fa-star fa-lg text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Outros cards aqui -->
+
     </div>
 </div>
 <hr>
