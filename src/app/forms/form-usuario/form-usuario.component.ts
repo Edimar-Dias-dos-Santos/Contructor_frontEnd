@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { ExceptionDefault } from 'src/app/Shared/Messages/Exceptions';
 
 @Component({
   selector: 'app-form-usuario',
@@ -38,7 +40,8 @@ export class FormUsuarioComponent implements OnInit {
         error => console.error(error)
       );
     } else {
-      alert('Por favor, preencha todos os campos do formulário.');
+      Swal.fire('Atenção!','Por favor, preencha todos os campos do formulário.', 'error');
+      throw new ExceptionDefault('Por favor informe todos os campos');
     }
   }
 

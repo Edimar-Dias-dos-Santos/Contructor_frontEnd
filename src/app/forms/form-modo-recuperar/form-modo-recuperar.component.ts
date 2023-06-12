@@ -3,6 +3,8 @@ import { ServRecuperaLoginService } from 'src/app/Shared/Service/serv-recupera-l
 import { RecuperaLogin } from 'src/app/Shared/Model/RecuperaLogin';
 import { Router } from '@angular/router';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
+import Swal from 'sweetalert2';
+import { ExceptionDefault } from 'src/app/Shared/Messages/Exceptions';
 
 @Component({
   selector: 'app-form-modo-recuperar',
@@ -45,14 +47,19 @@ export class FormModoRecuperarComponent implements OnInit {
             this.router.navigateByUrl('/FormCriacaoLogin'); // Redireciona para o formulário de login
           },
           error => {
-            console.log('Ocorreu um erro ao criar o login:', error);
+            Swal.fire('Atenção!','Ocorreu um erro ao criar o login:', 'error');
+            throw new ExceptionDefault('Por favor informe todos os campos');
+            
           }
         );
       } else {
-        console.log('Usuário atual não está definido.');
+        Swal.fire('Atenção!','Usuário atual não está definido.', 'error');
+        throw new ExceptionDefault('Usuário atual não está definido.');
       }
     } else {
-      alert('Por favor, preencha todos os campos do formulário.');
+      Swal.fire('Atenção!','Por favor, preencha todos os campos do formulário.', 'error');
+      throw new ExceptionDefault('Por favor, preencha todos os campos do formulário.');
+      
     }
   }
 }
