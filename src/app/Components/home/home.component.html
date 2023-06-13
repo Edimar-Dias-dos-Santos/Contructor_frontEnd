@@ -36,13 +36,18 @@
         <div class="col-md-12">
             <div class="btn-group mb-4 d-flex flex-wrap justify-content-between">
                 <div class="btn-group" role="group">
-                    <button class="btn btn-primary d-none d-md-block" data-filter=".pedreiro">Pedreiro</button>
-                    <button class="btn btn-primary d-none d-md-block" data-filter=".marceneiro">Marceneiro</button>
-                    <button class="btn btn-primary d-none d-md-block" data-filter=".pintor">Pintor</button>
-                    <button class="btn btn-primary d-none d-md-block" data-filter=".eletricista">Eletricista</button>
-                    <button class="btn btn-primary d-none d-md-block" data-filter=".encanador">Encanador</button>
-                    <button class="btn btn-primary d-none d-md-block" data-filter=".vidraceiro">Vidraceiro</button>
-                    <button class="btn btn-primary d-none" data-filter="*">Todos</button>
+                    <button class="btn btn-primary d-none d-md-block" (click)="filterDivs('Pedreiro')">Pedreiro</button>
+                    <button class="btn btn-primary d-none d-md-block"
+                        (click)="filterDivs('Marceneiro')">Marceneiro</button>
+                    <button class="btn btn-primary d-none d-md-block" (click)="filterDivs('Pintor')">Pintor</button>
+                    <button class="btn btn-primary d-none d-md-block"
+                        (click)="filterDivs('Eletrecista')">Eletricista</button>
+                    <button class="btn btn-primary d-none d-md-block"
+                        (click)="filterDivs('Encanador')">Encanador</button>
+                    <button class="btn btn-primary d-none d-md-block"
+                        (click)="filterDivs('Vidraceiro')">Vidraceiro</button>
+                    <button class="btn btn-primary d-none d-md-block" data-filter="all"
+                        (click)="filterDivs('all')">Todos</button>
                 </div>
 
                 <div class="col-md-3">
@@ -64,7 +69,7 @@
     <div class="row mt-4">
 
         <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;">
+        <div class="col-md-4" style="padding-bottom:2rem ;" id="Pedreiro">
             <div class="card pointer" routerLink="perfil">
                 <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
                 <div class="card-body">
@@ -94,7 +99,7 @@
 
 
         <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;">
+        <div class="col-md-4" style="padding-bottom:2rem ;" id="Marceneiro">
             <div class="card pointer" routerLink="perfil">
                 <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
                 <div class="card-body">
@@ -123,7 +128,7 @@
         <!-- Outros cards aqui -->
 
         <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;">
+        <div class="col-md-4" style="padding-bottom:2rem ;" id="Pintor">
             <div class="card pointer" routerLink="perfil">
                 <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
                 <div class="card-body">
@@ -152,7 +157,7 @@
         <!-- Outros cards aqui -->
 
         <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;">
+        <div class="col-md-4" style="padding-bottom:2rem ;" id="Eletrecista">
             <div class="card pointer" routerLink="perfil">
                 <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
                 <div class="card-body">
