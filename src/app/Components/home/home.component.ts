@@ -37,4 +37,36 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     }
   }
+
+  sortDivsByName(order: 'asc' | 'desc'): void {
+    const divs = Array.from(this.elementRef.nativeElement.querySelectorAll('.col-md-4'));
+
+    // Salvar os botões de filtro e removê-los temporariamente
+    const filterButtons = Array.from(this.elementRef.nativeElement.querySelectorAll('.btn-filter'));
+    filterButtons.forEach((button: any) => {
+      button.remove();
+    });
+
+    divs.sort((a: any, b: any) => {
+      const nameA = a.querySelector('.card-title').textContent.trim().toLowerCase();
+      const nameB = b.querySelector('.card-title').textContent.trim().toLowerCase();
+
+      if (order === 'asc') {
+        return nameA.localeCompare(nameB);
+      } else {
+        return nameB.localeCompare(nameA);
+      }
+    });
+
+    const container = this.elementRef.nativeElement.querySelector('.container.my-5 .row.mt-4');
+    divs.forEach((div: any) => {
+      container.appendChild(div);
+    });
+
+    // Restaurar os botões de filtro na posição original
+    const filterButtonContainer = this.elementRef.nativeElement.querySelector('.btn-group[role="group"]');
+    filterButtons.forEach((button: any) => {
+      filterButtonContainer.appendChild(button);
+    });
+  }
 }
