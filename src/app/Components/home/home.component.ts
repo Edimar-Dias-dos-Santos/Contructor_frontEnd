@@ -1,7 +1,6 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
-import Isotope from 'isotope-layout';
 
 @Component({
   selector: 'app-home',
@@ -11,38 +10,14 @@ import Isotope from 'isotope-layout';
 export class HomeComponent implements OnInit, AfterViewInit {
   Usuarios: Usuario[] = [];
 
-  constructor(public servUsuario: ServUsuario) { }
+  constructor(public servUsuario: ServUsuario, private elementRef: ElementRef) { }
 
   ngOnInit(): void {
     this.getUsuarios();
   }
 
   ngAfterViewInit(): void {
-    const grid = new Isotope('#card-container', {
-      itemSelector: '.item',
-      layoutMode: 'fitRows',
-    });
-
-    const filterButtons = document.querySelectorAll('.filter-button');
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const filterValue = button.getAttribute('data-filter');
-        if (filterValue) {
-          grid.arrange({ filter: filterValue });
-        }
-      });
-    });
-
-    const sortButtons = document.querySelectorAll('.sort-button');
-    sortButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const sortBy = button.getAttribute('data-sort-by');
-        const sortAsc = button.getAttribute('data-sort-asc') === 'true';
-        if (sortBy) {
-          grid.arrange({ sortBy: sortBy, sortAscending: sortAsc });
-        }
-      });
-    });
+    this.filterDivs('all');
   }
 
   getUsuarios() {
@@ -50,32 +25,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.Usuarios = data;
     });
   }
+
+  filterDivs(id: string): void {
+    const divs = this.elementRef.nativeElement.querySelectorAll('.col-md-4');
+    for (let i = 0; i < divs.length; i++) {
+      const div = divs[i] as HTMLElement;
+      if (id === 'all' || div.id === id) {
+        div.style.display = 'block';
+      } else {
+        div.style.display = 'none';
+      }
+    }
+  }
 }
-
-
-document.addEventListener('DOMContentLoaded', (): void => {
-  const carousel = document.querySelector('.carousel') as HTMLElement;
-  const carouselInner = carousel.querySelector('.carousel-inner') as HTMLElement;
-  const prevBtn = carousel.querySelector('.carousel-control.prev') as HTMLElement;
-  const nextBtn = carousel.querySelector('.carousel-control.next') as HTMLElement;
-  const itemWidth = carouselInner.offsetWidth / 3;
-  let position = 0;
-
-  prevBtn.addEventListener('click', (e): void => {
-    e.preventDefault();
-    position += itemWidth;
-    if (position > 0) {
-      position = -itemWidth * 2;
-    }
-    carouselInner.style.transform = `translateX(${position}px)`;
-  });
-
-  nextBtn.addEventListener('click', (e): void => {
-    e.preventDefault();
-    position -= itemWidth;
-    if (position < -itemWidth * 2) {
-      position = 0;
-    }
-    carouselInner.style.transform = `translateX(${position}px)`;
-  });
-});
