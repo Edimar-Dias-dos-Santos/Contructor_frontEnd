@@ -24,13 +24,9 @@
         <span class="visually-hidden">Next</span>
     </a>
 </div>
-<!--banner-->
-
-
+<!-- banner -->
 
 <div class="container my-5">
-
-
 
     <div class="row mt-4">
         <div class="col-md-12">
@@ -57,134 +53,133 @@
                     </div>
                 </div>
                 <div class="btn-group" role="group">
-                    <button class="btn btn-primary" data-sort-by="name" data-sort-asc="true">Ordenar A-Z</button>
-                    <button class="btn btn-primary" data-sort-by="name" data-sort-asc="false">Ordenar Z-A</button>
+                    <button class="btn btn-primary" (click)="sortDivsByName('asc')">Ordenar A-Z</button>
+                    <button class="btn btn-primary" (click)="sortDivsByName('desc')">Ordenar Z-A</button>
                 </div>
             </div>
         </div>
     </div>
+    <div>
+        <div class="container my-5">
+            <div class="row mt-4">
 
-
-
-    <div class="row mt-4">
-
-        <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;" id="Pedreiro">
-            <div class="card pointer" routerLink="perfil">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
-                <div class="card-body">
-                    <h5 class="card-title">Pedro</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <label>Pedreiro</label>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
-                                class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <div>
-                            <h5 class="review-stat">12 Viewers</h5>
-                            <div class="small-ratings">
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
+                <!-- cards aqui -->
+                <div class="col-md-4" style="padding-bottom:2rem ;" id="Pedreiro">
+                    <div class="card pointer" routerLink="perfil">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+                        <div class="card-body">
+                            <h5 class="card-title">Marcos</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            <label>Pedreiro</label>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
+                                        class="fab fa-whatsapp"></i> WhatsApp</a>
+                                <div>
+                                    <h5 class="review-stat">12 Viewers</h5>
+                                    <div class="small-ratings">
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Outros cards aqui -->
+                <!-- Outros cards aqui -->
 
 
-        <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;" id="Marceneiro">
-            <div class="card pointer" routerLink="perfil">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
-                <div class="card-body">
-                    <h5 class="card-title">Pedro</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <label>Pedreiro</label>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
-                                class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <div>
-                            <h5 class="review-stat">12 Viewers</h5>
-                            <div class="small-ratings">
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
+                <!-- cards aqui -->
+                <div class="col-md-4" style="padding-bottom:2rem ;" id="Marceneiro">
+                    <div class="card pointer" routerLink="perfil">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+                        <div class="card-body">
+                            <h5 class="card-title">Vanessa</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            <label>Pedreiro</label>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
+                                        class="fab fa-whatsapp"></i>
+                                    WhatsApp</a>
+                                <div>
+                                    <h5 class="review-stat">12 Viewers</h5>
+                                    <div class="small-ratings">
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Outros cards aqui -->
+                <!-- Outros cards aqui -->
 
-        <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;" id="Pintor">
-            <div class="card pointer" routerLink="perfil">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
-                <div class="card-body">
-                    <h5 class="card-title">Pedro</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <label>Marceneiro</label>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
-                                class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <div>
-                            <h5 class="review-stat">12 Viewers</h5>
-                            <div class="small-ratings">
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
+                <!-- cards aqui -->
+                <div class="col-md-4" style="padding-bottom:2rem ;" id="Pintor">
+                    <div class="card pointer" routerLink="perfil">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+                        <div class="card-body">
+                            <h5 class="card-title">Amorim</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            <label>Pedreiro</label>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
+                                        class="fab fa-whatsapp"></i>
+                                    WhatsApp</a>
+                                <div>
+                                    <h5 class="review-stat">12 Viewers</h5>
+                                    <div class="small-ratings">
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Outros cards aqui -->
+                <!-- Outros cards aqui -->
 
-        <!-- cards aqui -->
-        <div class="col-md-4" style="padding-bottom:2rem ;" id="Eletrecista">
-            <div class="card pointer" routerLink="perfil">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
-                <div class="card-body">
-                    <h5 class="card-title">Pedro</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <label>Pedreiro</label>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
-                                class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <div>
-                            <h5 class="review-stat">12 Viewers</h5>
-                            <div class="small-ratings">
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
-                                <span class="fa fa-star fa-lg text-warning"></span>
+                <!-- cards aqui -->
+                <div class="col-md-4" style="padding-bottom:2rem ;" id="Eletrecista">
+                    <div class="card pointer" routerLink="perfil">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+                        <div class="card-body">
+                            <h5 class="card-title">Pedro</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            <label>Pedreiro</label>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
+                                        class="fab fa-whatsapp"></i>
+                                    WhatsApp</a>
+                                <div>
+                                    <h5 class="review-stat">12 Viewers</h5>
+                                    <div class="small-ratings">
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                        <span class="fa fa-star fa-lg text-warning"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Outros cards aqui -->
+
             </div>
         </div>
-        <!-- Outros cards aqui -->
 
-    </div>
-</div>
-<hr>
+        <hr>
