@@ -39,3 +39,20 @@
 .carousel-control.next {
     right: 10px;
 }
+
+
+
+
+.custom-spinner {
+    border: 4px solid rgb(0, 255, 13);
+    border-top-color: #01ff16;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
