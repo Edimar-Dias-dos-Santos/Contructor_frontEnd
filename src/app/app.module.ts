@@ -17,6 +17,7 @@ import { FormModoRecuperarComponent } from './forms/form-modo-recuperar/form-mod
 import { FormUsuarioComponent } from './forms/form-usuario/form-usuario.component';
 import { FormCriacaoLoginComponent } from './forms/form-criacao-login/form-criacao-login.component';
 import { MenuFinalCadastroComponent } from './Components/menu-final-cadastro/menu-final-cadastro.component';
+import { ConstructorADMComponent } from './constructorADM/constructor-adm/constructor-adm.component';
 
 
 
@@ -36,7 +37,8 @@ import { MenuFinalCadastroComponent } from './Components/menu-final-cadastro/men
     SugestoesComponent,
     TipoCadastroComponent,
     FormCriacaoLoginComponent,
-    MenuFinalCadastroComponent
+    MenuFinalCadastroComponent,
+    ConstructorADMComponent
   ],
   imports: [
     HttpClientModule,
