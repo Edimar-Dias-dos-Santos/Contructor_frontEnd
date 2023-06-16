@@ -8,7 +8,7 @@ import { ExceptionDefault } from 'src/app/Shared/Messages/Exceptions';
 @Component({
   selector: 'app-form-usuario',
   templateUrl: './form-usuario.component.html',
-  styleUrls: ['./form-usuario.component.css']
+  styleUrls: ['./form-usuario.component.scss']
 })
 export class FormUsuarioComponent implements OnInit {
 
@@ -40,7 +40,7 @@ export class FormUsuarioComponent implements OnInit {
         error => console.error(error)
       );
     } else {
-      Swal.fire('Atenção!','Por favor, preencha todos os campos do formulário.', 'error');
+      Swal.fire('Atenção!', 'Por favor, preencha todos os campos do formulário.', 'error');
       throw new ExceptionDefault('Por favor informe todos os campos');
     }
   }
