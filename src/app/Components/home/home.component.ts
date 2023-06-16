@@ -85,7 +85,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       title: 'Carregando dados',
       html: '<div class="custom-spinner">Por favor aguarde</div>', // Use a div with the custom class for the spinner
       allowOutsideClick: false,
-      timer: 1000,
+      timer: 500,
       timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading();

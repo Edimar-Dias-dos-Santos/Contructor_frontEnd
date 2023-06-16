@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isCollapsed: boolean = true;
 
+  closeNav() {
+    this.isCollapsed = true;
+  }
 }
