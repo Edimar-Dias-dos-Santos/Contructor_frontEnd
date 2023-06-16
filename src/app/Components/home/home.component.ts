@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +11,21 @@ import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
 export class HomeComponent implements OnInit, AfterViewInit {
   Usuarios: Usuario[] = [];
 
-  constructor(public servUsuario: ServUsuario, private elementRef: ElementRef) { }
+  constructor(
+    public servUsuario: ServUsuario,
+    private elementRef: ElementRef,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.getUsuarios();
   }
 
   ngAfterViewInit(): void {
-    this.filterDivs('all');
+    this.route.queryParams.subscribe(params => {
+      const filterId = params['filterId'];
+      this.filterDivs(filterId || 'all');
+    });
   }
 
   getUsuarios() {
