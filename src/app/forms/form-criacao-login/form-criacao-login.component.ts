@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-form-criacao-login',
   templateUrl: './form-criacao-login.component.html',
-  styleUrls: ['./form-criacao-login.component.css']
+  styleUrls: ['./form-criacao-login.component.scss']
 })
 export class FormCriacaoLoginComponent implements OnInit {
 

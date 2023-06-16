@@ -9,7 +9,7 @@ import { ExceptionDefault } from 'src/app/Shared/Messages/Exceptions';
 @Component({
   selector: 'app-form-modo-recuperar',
   templateUrl: './form-modo-recuperar.component.html',
-  styleUrls: ['./form-modo-recuperar.component.css']
+  styleUrls: ['./form-modo-recuperar.component.scss']
 })
 export class FormModoRecuperarComponent implements OnInit {
 
@@ -47,19 +47,19 @@ export class FormModoRecuperarComponent implements OnInit {
             this.router.navigateByUrl('/FormCriacaoLogin'); // Redireciona para o formulário de login
           },
           error => {
-            Swal.fire('Atenção!','Ocorreu um erro ao criar o login:', 'error');
+            Swal.fire('Atenção!', 'Ocorreu um erro ao criar o login:', 'error');
             throw new ExceptionDefault('Por favor informe todos os campos');
-            
+
           }
         );
       } else {
-        Swal.fire('Atenção!','Usuário atual não está definido.', 'error');
+        Swal.fire('Atenção!', 'Usuário atual não está definido.', 'error');
         throw new ExceptionDefault('Usuário atual não está definido.');
       }
     } else {
-      Swal.fire('Atenção!','Por favor, preencha todos os campos do formulário.', 'error');
+      Swal.fire('Atenção!', 'Por favor, preencha todos os campos do formulário.', 'error');
       throw new ExceptionDefault('Por favor, preencha todos os campos do formulário.');
-      
+
     }
   }
 }
