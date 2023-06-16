@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.getUsuarios();
+    this.showSpinner();
   }
 
   ngAfterViewInit(): void {
@@ -77,4 +79,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
       filterButtonContainer.appendChild(button);
     });
   }
+
+  showSpinner(): void {
+    Swal.fire({
+      title: 'Carregando dados',
+      html: '<div class="custom-spinner">Por favor aguarde</div>', // Use a div with the custom class for the spinner
+      allowOutsideClick: false,
+      timer: 1000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      willClose: () => {
+        // Cleanup code
+      }
+    });
+  }
+
+
 }
