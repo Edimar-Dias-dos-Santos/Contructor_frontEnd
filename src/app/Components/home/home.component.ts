@@ -1,8 +1,9 @@
 import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
-import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+import { ActivatedRoute } from '@angular/router';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
   selector: 'app-home',
@@ -28,10 +29,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       const filterId = params['filterId'];
       this.filterDivs(filterId || 'all');
     });
+
+   // this.animateBanner();
   }
 
   getUsuarios() {
-    this.servUsuario.getUsuarios().subscribe((data) => {
+    this.servUsuario.getUsuarios().subscribe((data: Usuario[]) => { // Specify the type of 'data' as Usuario[]
       this.Usuarios = data;
     });
   }
@@ -51,7 +54,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   sortDivsByName(order: 'asc' | 'desc'): void {
     const divs = Array.from(this.elementRef.nativeElement.querySelectorAll('.col-md-4'));
 
-    // Salvar os botões de filtro e removê-los temporariamente
+    // Save the filter buttons and temporarily remove them
     const filterButtons = Array.from(this.elementRef.nativeElement.querySelectorAll('.btn-filter'));
     filterButtons.forEach((button: any) => {
       button.remove();
@@ -73,17 +76,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
       container.appendChild(div);
     });
 
-    // Restaurar os botões de filtro na posição original
+    // Restore the filter buttons to their original position
     const filterButtonContainer = this.elementRef.nativeElement.querySelector('.btn-group[role="group"]');
     filterButtons.forEach((button: any) => {
       filterButtonContainer.appendChild(button);
     });
   }
 
-  showSpinner(): void {
+ showSpinner(): void {
     Swal.fire({
       title: 'Carregando dados',
-      html: '<div class="custom-spinner">Por favor aguarde</div>', // Use a div with the custom class for the spinner
+      html: '<div class="custom-spinner">Por favor aguarde</div>',
       allowOutsideClick: false,
       timer: 500,
       timerProgressBar: true,
@@ -95,6 +98,54 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     });
   }
-
-
-}
+   
+  animateBanner(): void {
+    const bannerElement = document.getElementById('banner');
+    if (bannerElement) {
+      const textElement = bannerElement.querySelector('.banner-text');
+      if (textElement) {
+        // Animação de brilho
+        const shineAnimation = anime({
+          targets: textElement,
+          //opacity: [5.5, 1],
+          duration: 5,
+          easing: 'linear',
+          loop: true,
+          direction: 'alternate'
+        });
+  
+        // Animação de efeitos de cor
+        const colorAnimation = anime({
+          targets: textElement,
+          color: ['#0000', '#00ff00', '#0000ff'], // Array de cores para animação
+          duration: 2000,
+          easing: 'linear',
+          loop: true
+        });
+  
+        const bannerAnimation = anime({
+          targets: bannerElement,
+          opacity: [0, 1],
+          duration: 1000,
+          easing: 'easeInOutQuad',
+          complete: () => {
+            shineAnimation.pause();
+            colorAnimation.pause();
+          }
+        });
+  
+        // Reiniciar animações quando o mouse passar pelo texto
+        textElement.addEventListener('mouseenter', () => {
+          shineAnimation.play();
+          colorAnimation.play();
+        });
+  
+        // Pausar animações quando o mouse sair do texto
+        textElement.addEventListener('mouseleave', () => {
+          shineAnimation.pause();
+          colorAnimation.pause();
+        });
+      }
+    }
+  }
+  }
