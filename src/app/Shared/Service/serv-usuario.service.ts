@@ -8,7 +8,7 @@ import { Usuario } from '../Model/Usuario';
 })
 export class ServUsuario {
 
-  private apiUrl = 'http://localhost:8080/constructor/api/usuario';
+  private apiUrl = 'http://localhost:8080/Usuario';
 
   usuarioAtual: Usuario | null = null;
 
