@@ -1,10 +1,11 @@
 export interface Usuario {
 
-    id: number;
+    id: string;
     permissao: boolean;
     nome: string;
-    telefone: string;
     email: string;
+    telefone: string;
+
 
 }
 

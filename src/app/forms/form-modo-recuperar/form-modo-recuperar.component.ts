@@ -27,8 +27,8 @@ export class FormModoRecuperarComponent implements OnInit {
 
   inicializarRecuperaLogin(): RecuperaLogin {
     return {
-      id: 0,
-      idUsuario: 0,
+      id: '',
+      idUsuario: '',
       numeroDocumento: '',
       dataNascimento: new Date(),
       ultimoNome: ''

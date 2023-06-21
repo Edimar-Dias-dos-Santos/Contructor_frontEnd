@@ -20,7 +20,7 @@ export class ServUsuario {
   }
 
   // Obter um usuário pelo ID
-  getUsuario(id: number): Observable<Usuario> {
+  getUsuario(id: string): Observable<Usuario> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<Usuario>(url);
   }
@@ -37,7 +37,7 @@ export class ServUsuario {
   }
 
   // Excluir um usuário
-  deleteUsuario(id: number): Observable<any> {
+  deleteUsuario(id: string): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete(url);
   }

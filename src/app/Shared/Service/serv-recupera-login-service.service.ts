@@ -19,7 +19,7 @@ export class ServRecuperaLoginService {
     return this.http.get<RecuperaLogin[]>(this.apiUrl);
   }
 
-  getRecuperaLogin(id: number): Observable<RecuperaLogin> {
+  getRecuperaLogin(id: string): Observable<RecuperaLogin> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<RecuperaLogin>(url);
   }
@@ -29,7 +29,7 @@ export class ServRecuperaLoginService {
     return this.http.put<RecuperaLogin>(url, recuperaLogin);
   }
 
-  deleteRecuperaLogin(id: number): Observable<void> {
+  deleteRecuperaLogin(id: string): Observable<void> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete<void>(url);
   }

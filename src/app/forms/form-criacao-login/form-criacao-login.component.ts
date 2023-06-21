@@ -30,8 +30,8 @@ export class FormCriacaoLoginComponent implements OnInit {
 
   iniciarLogin(): Login {
     return {
-      id: 0,
-      idUsuario: 0,
+      id: '',
+      idUsuario: '',
       senha: '',
       eMail: this.servUsuario.usuarioAtual?.email || ''
     };
