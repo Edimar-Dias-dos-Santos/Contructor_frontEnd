@@ -15,22 +15,5 @@ export class ServRecuperaLoginService {
     return this.http.post<RecuperaLogin>(this.apiUrl, recuperaLogin);
   }
 
-  getRecuperaLogins(): Observable<RecuperaLogin[]> {
-    return this.http.get<RecuperaLogin[]>(this.apiUrl);
-  }
 
-  getRecuperaLogin(id: string): Observable<RecuperaLogin> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<RecuperaLogin>(url);
-  }
-
-  updateRecuperaLogin(recuperaLogin: RecuperaLogin): Observable<RecuperaLogin> {
-    const url = `${this.apiUrl}/${recuperaLogin}`;
-    return this.http.put<RecuperaLogin>(url, recuperaLogin);
-  }
-
-  deleteRecuperaLogin(id: string): Observable<void> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.delete<void>(url);
-  }
 }
