@@ -22,6 +22,7 @@ import { ReclamacoesADMComponent } from './constructorADM/reclamacoes-adm/reclam
 import { EstatisticasADMComponent } from './constructorADM/estatisticas-adm/estatisticas-adm.component';
 import { ControleUsuariosADMComponent } from './constructorADM/controle-usuarios-adm/controle-usuarios-adm.component';
 import { ControleAdministradoresADMComponent } from './constructorADM/controle-administradores-adm/controle-administradores-adm.component';
+import { FormCliFornecComponent } from './forms/form-cli-fornec/form-cli-fornec.component';
 
 
 
@@ -46,7 +47,8 @@ import { ControleAdministradoresADMComponent } from './constructorADM/controle-a
     ReclamacoesADMComponent,
     EstatisticasADMComponent,
     ControleUsuariosADMComponent,
-    ControleAdministradoresADMComponent
+    ControleAdministradoresADMComponent,
+    FormCliFornecComponent
   ],
   imports: [
     HttpClientModule,
