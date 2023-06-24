@@ -7,7 +7,7 @@ import { RecuperaLogin } from '../Model/RecuperaLogin';
   providedIn: 'root'
 })
 export class ServRecuperaLoginService {
-  private apiUrl = 'http://localhost:8080/constructor/api/recuperaLogin';
+  private apiUrl = 'http://localhost:8080/api/recuperaLogin';
 
   constructor(private http: HttpClient) { }
 

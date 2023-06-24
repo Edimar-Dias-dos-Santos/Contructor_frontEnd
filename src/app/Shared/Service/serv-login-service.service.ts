@@ -8,7 +8,7 @@ import { Login } from '../Model/Login';
   providedIn: 'root'
 })
 export class ServLoginServiceService {
-  private apiUrl = 'http://localhost:8080/constructor/api/Login';
+  private apiUrl = 'http://localhost:8080/api/Login';
   constructor(private http: HttpClient) { }
 
   SetLogin(login: Login): Observable<Login> {
