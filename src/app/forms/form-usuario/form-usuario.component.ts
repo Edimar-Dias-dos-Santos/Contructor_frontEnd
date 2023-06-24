@@ -22,7 +22,7 @@ export class FormUsuarioComponent implements OnInit {
 
   inicializarUsuario(): Usuario {
     return {
-      id: 0,
+      id: '',
       permissao: true,
       nome: '',
       telefone: '',

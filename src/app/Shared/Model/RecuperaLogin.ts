@@ -1,6 +1,6 @@
 export interface RecuperaLogin {
-    id: number;
-    idUsuario: number;
+    id: string;
+    idUsuario: string;
     numeroDocumento: string;
     dataNascimento: Date;
     ultimoNome: string;
