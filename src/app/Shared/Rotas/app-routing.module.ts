@@ -12,6 +12,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReclamacoesADMComponent } from 'src/app/constructorADM/reclamacoes-adm/reclamacoes-adm.component';
 import { EstatisticasADMComponent } from 'src/app/constructorADM/estatisticas-adm/estatisticas-adm.component';
+import { ControleUsuariosADMComponent } from 'src/app/constructorADM/controle-usuarios-adm/controle-usuarios-adm.component';
+import { ControleAdministradoresADMComponent } from 'src/app/constructorADM/controle-administradores-adm/controle-administradores-adm.component';
 
 
 
@@ -65,6 +67,14 @@ const routes: Routes = [
   {
     path:"EstatisticasADM",
     component: EstatisticasADMComponent
+  },
+  {
+    path: "ControleUsuariosADM",
+    component: ControleUsuariosADMComponent
+  },
+  {
+    path : "ControleAdministradoresADM",
+    component: ControleAdministradoresADMComponent
   }
   
 

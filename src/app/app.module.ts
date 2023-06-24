@@ -20,6 +20,8 @@ import { MenuFinalCadastroComponent } from './Components/menu-final-cadastro/men
 import { ConstructorADMComponent } from './constructorADM/constructor-adm/constructor-adm.component';
 import { ReclamacoesADMComponent } from './constructorADM/reclamacoes-adm/reclamacoes-adm.component';
 import { EstatisticasADMComponent } from './constructorADM/estatisticas-adm/estatisticas-adm.component';
+import { ControleUsuariosADMComponent } from './constructorADM/controle-usuarios-adm/controle-usuarios-adm.component';
+import { ControleAdministradoresADMComponent } from './constructorADM/controle-administradores-adm/controle-administradores-adm.component';
 
 
 
@@ -42,7 +44,9 @@ import { EstatisticasADMComponent } from './constructorADM/estatisticas-adm/esta
     MenuFinalCadastroComponent,
     ConstructorADMComponent,
     ReclamacoesADMComponent,
-    EstatisticasADMComponent
+    EstatisticasADMComponent,
+    ControleUsuariosADMComponent,
+    ControleAdministradoresADMComponent
   ],
   imports: [
     HttpClientModule,
