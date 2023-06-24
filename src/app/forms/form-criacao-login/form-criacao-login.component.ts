@@ -30,10 +30,10 @@ export class FormCriacaoLoginComponent implements OnInit {
 
   iniciarLogin(): Login {
     return {
-      id: '',
+      
       idUsuario: '',
-      senha: '',
-      eMail: this.servUsuario.usuarioAtual?.email || ''
+      password: '',
+      username: this.servUsuario.usuarioAtual?.email || ''
     };
   }
 
@@ -41,16 +41,17 @@ export class FormCriacaoLoginComponent implements OnInit {
 
 
     if (this.servUsuario.usuarioAtual) {
-      this.login.eMail = this.servUsuario.usuarioAtual.email;
+      this.login.username = this.servUsuario.usuarioAtual.email;
+      this.login.idUsuario = this.servUsuario.usuarioAtual.idUsuario;
     }
 
-    if (!this.confiracaoSenha || !this.login.senha) {
+    if (!this.confiracaoSenha || !this.login.password) {
 
       Swal.fire('Atenção!', 'Todos os campos deveram ser preenchidos!', 'error');
       throw new ExceptionDefault('Por favor informe todos os campos');
     }
 
-    if (this.confiracaoSenha != this.login.senha) {
+    if (this.confiracaoSenha != this.login.password) {
 
       Swal.fire('Erro!', 'As senhas precisam ser iguais!', 'error');
       throw new ExceptionDefault('As senhas precisam ser iguais');

@@ -7,7 +7,7 @@
 
       <div class="mb-3">
         <label for="eMail" class="form-label">E-mail</label>
-        <input type="text" class="form-control" id="eMail" [value]="login.eMail" disabled>
+        <input type="text" class="form-control" id="eMail" [value]="login.username" disabled>
       </div>
 
 
@@ -16,7 +16,7 @@
         <div class="mb-3">
           <label for="numeroDocumento" class="form-label">Digite uma senha</label>
           <input type="password" class="form-control" id="numeroDocumento" name="numeroDocumento"
-            placeholder="Exemplo: Xy2W@#463" [(ngModel)]="login.senha" required>
+            placeholder="Exemplo: Xy2W@#463" [(ngModel)]="login.password" required>
         </div>
         <div class="mb-3">
           <label for="dataNascimento" class="form-label">Confime a senha</label>
