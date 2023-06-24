@@ -5,7 +5,7 @@ import { FormUsuarioComponent } from 'src/app/forms/form-usuario/form-usuario.co
 import { PerfilComponent } from '../../Components/perfil/perfil.component';
 import { SugestoesComponent } from '../../Components/sugestoes/sugestoes.component';
 import { CategoriasComponent } from '../../Components/categorias/categorias.component';
-import { LoginComponent } from '../../forms/login/login.component';
+import { LoginComponent } from '../../Components/login/login.component';
 import { FormCriacaoLoginComponent } from 'src/app/forms/form-criacao-login/form-criacao-login.component';
 import { MenuFinalCadastroComponent } from 'src/app/Components/menu-final-cadastro/menu-final-cadastro.component';
 import { NgModule } from '@angular/core';

@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
-import { LoginComponent } from './forms/login/login.component';
+import { LoginComponent } from './Components/login/login.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
 import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
 import { PerfilComponent } from './Components/perfil/perfil.component';

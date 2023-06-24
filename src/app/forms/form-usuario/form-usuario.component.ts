@@ -50,30 +50,4 @@ export class FormUsuarioComponent implements OnInit {
     }
   }
 
-
-  updateUsuario() {
-    if (this.usuario.nome && this.usuario.telefone && this.usuario.email) {
-      this.servUsuario.updateUsuario(this.usuario).subscribe(
-        usuarioAtualizado => {
-          // Realize as ações necessárias, como redirecionar para a lista de usuários
-        },
-        error => console.error(error)
-      );
-    } else {
-      console.log('Por favor, preencha todos os campos do formulário.');
-    }
-  }
-
-  deleteUsuario() {
-    if (this.usuario.idUsuario) {
-      this.servUsuario.deleteUsuario(this.usuario.idUsuario).subscribe(
-        () => {
-          // Realize as ações necessárias, como redirecionar para a lista de usuários
-        },
-        error => console.error(error)
-      );
-    } else {
-      console.log('Usuário não possui um ID válido.');
-    }
-  }
 }
