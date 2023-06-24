@@ -27,9 +27,9 @@ export class FormModoRecuperarComponent implements OnInit {
 
   inicializarRecuperaLogin(): RecuperaLogin {
     return {
-      id: '',
+      idRecuperaLogin: '',
       idUsuario: '',
-      numeroDocumento: '',
+      cpf: '',
       dataNascimento: new Date(),
       ultimoNome: ''
     };
@@ -37,7 +37,7 @@ export class FormModoRecuperarComponent implements OnInit {
 
   setRecuperaLogin() {
 
-    if (this.recuperaLogin.numeroDocumento && this.recuperaLogin.dataNascimento && this.recuperaLogin.ultimoNome) {
+    if (this.recuperaLogin.cpf && this.recuperaLogin.dataNascimento && this.recuperaLogin.ultimoNome) {
       if (this.servUsuario.usuarioAtual) {
         this.recuperaLogin.idUsuario = this.servUsuario.usuarioAtual.idUsuario;
 

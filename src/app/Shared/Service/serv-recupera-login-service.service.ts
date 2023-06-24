@@ -7,7 +7,7 @@ import { RecuperaLogin } from '../Model/RecuperaLogin';
   providedIn: 'root'
 })
 export class ServRecuperaLoginService {
-  private apiUrl = 'http://localhost:8080/api/RecuperaLogin';
+  private apiUrl = 'http://localhost:8080/api/recuperaLogin';
 
   constructor(private http: HttpClient) { }
 
@@ -25,7 +25,7 @@ export class ServRecuperaLoginService {
   }
 
   updateRecuperaLogin(recuperaLogin: RecuperaLogin): Observable<RecuperaLogin> {
-    const url = `${this.apiUrl}/${recuperaLogin.id}`;
+    const url = `${this.apiUrl}/${recuperaLogin}`;
     return this.http.put<RecuperaLogin>(url, recuperaLogin);
   }
 
