@@ -18,6 +18,7 @@ import { FormUsuarioComponent } from './forms/form-usuario/form-usuario.componen
 import { FormCriacaoLoginComponent } from './forms/form-criacao-login/form-criacao-login.component';
 import { MenuFinalCadastroComponent } from './Components/menu-final-cadastro/menu-final-cadastro.component';
 import { ConstructorADMComponent } from './constructorADM/constructor-adm/constructor-adm.component';
+import { ReclamacoesADMComponent } from './constructorADM/reclamacoes-adm/reclamacoes-adm.component';
 
 
 
@@ -38,7 +39,8 @@ import { ConstructorADMComponent } from './constructorADM/constructor-adm/constr
     TipoCadastroComponent,
     FormCriacaoLoginComponent,
     MenuFinalCadastroComponent,
-    ConstructorADMComponent
+    ConstructorADMComponent,
+    ReclamacoesADMComponent
   ],
   imports: [
     HttpClientModule,

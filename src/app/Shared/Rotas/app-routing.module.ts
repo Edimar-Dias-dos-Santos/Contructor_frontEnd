@@ -10,6 +10,7 @@ import { FormCriacaoLoginComponent } from 'src/app/forms/form-criacao-login/form
 import { MenuFinalCadastroComponent } from 'src/app/Components/menu-final-cadastro/menu-final-cadastro.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ReclamacoesADMComponent } from 'src/app/constructorADM/reclamacoes-adm/reclamacoes-adm.component';
 
 
 
@@ -55,7 +56,12 @@ const routes: Routes = [
   {
     path: "MenuFinalCadastroComponent",
     component: MenuFinalCadastroComponent
+  },
+  {
+    path: "reclamacoesADM",
+    component: ReclamacoesADMComponent
   }
+  
 
 
 ];
