@@ -11,6 +11,7 @@ import { MenuFinalCadastroComponent } from 'src/app/Components/menu-final-cadast
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReclamacoesADMComponent } from 'src/app/constructorADM/reclamacoes-adm/reclamacoes-adm.component';
+import { EstatisticasADMComponent } from 'src/app/constructorADM/estatisticas-adm/estatisticas-adm.component';
 
 
 
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path: "reclamacoesADM",
     component: ReclamacoesADMComponent
+  },
+  {
+    path:"EstatisticasADM",
+    component: EstatisticasADMComponent
   }
   
 

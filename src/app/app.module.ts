@@ -19,6 +19,7 @@ import { FormCriacaoLoginComponent } from './forms/form-criacao-login/form-criac
 import { MenuFinalCadastroComponent } from './Components/menu-final-cadastro/menu-final-cadastro.component';
 import { ConstructorADMComponent } from './constructorADM/constructor-adm/constructor-adm.component';
 import { ReclamacoesADMComponent } from './constructorADM/reclamacoes-adm/reclamacoes-adm.component';
+import { EstatisticasADMComponent } from './constructorADM/estatisticas-adm/estatisticas-adm.component';
 
 
 
@@ -40,7 +41,8 @@ import { ReclamacoesADMComponent } from './constructorADM/reclamacoes-adm/reclam
     FormCriacaoLoginComponent,
     MenuFinalCadastroComponent,
     ConstructorADMComponent,
-    ReclamacoesADMComponent
+    ReclamacoesADMComponent,
+    EstatisticasADMComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,0 +1,59 @@
+.container-principal {
+  width: 600px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.chart-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.chart-container {
+  flex: 1;
+  height: 200px;
+  position: relative;
+}
+
+.chart-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: height 0.5s;
+  color: #020202;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+
+
+.meta {
+  background-color: green;
+}
+
+.atual {
+  background-color: blue;
+}
+
+.diferenca {
+  background-color: red;
+}
+
+
+span{
+    margin-bottom: 5px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: fantasy;
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+}
