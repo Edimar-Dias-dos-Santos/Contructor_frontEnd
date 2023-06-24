@@ -30,7 +30,7 @@ export class FormModoRecuperarComponent implements OnInit {
       idRecuperaLogin: '',
       idUsuario: '',
       cpf: '',
-      dataNascimento: new Date(),
+      dataNascimento: '',
       ultimoNome: ''
     };
   }
