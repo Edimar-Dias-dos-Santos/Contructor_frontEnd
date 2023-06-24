@@ -32,7 +32,7 @@ export class ServUsuario {
 
   // Atualizar um usuário
   updateUsuario(usuario: Usuario): Observable<Usuario> {
-    const url = `${this.apiUrl}/${usuario.id}`;
+    const url = `${this.apiUrl}/${usuario.idUsuario}`;
     return this.http.put<Usuario>(url, usuario);
   }
 

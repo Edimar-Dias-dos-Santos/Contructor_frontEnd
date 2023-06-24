@@ -22,7 +22,7 @@ export class FormUsuarioComponent implements OnInit {
 
   inicializarUsuario(): Usuario {
     return {
-      id: '',
+      idUsuario: '',
       permissao: true,
       nome: '',
       telefone: '',
@@ -33,17 +33,23 @@ export class FormUsuarioComponent implements OnInit {
   setUsuario() {
     if (this.usuario.nome && this.usuario.telefone && this.usuario.email) {
       this.servUsuario.setUsuario(this.usuario).subscribe(
-        novoUsuario => {
-          this.servUsuario.setUsuarioAtual(novoUsuario); // Armazena o usuário atual no serviço
-          this.router.navigateByUrl('/tipoCadastro');
+        resposta => {
+          console.log('Resposta do servidor:', resposta); // Verifique a resposta recebida do servidor
+           
+  
+            this.usuario.idUsuario = resposta.idUsuario;
+            this.servUsuario.setUsuarioAtual(this.usuario);
+            this.router.navigateByUrl('/tipoCadastro');
+
         },
         error => console.error(error)
       );
     } else {
       Swal.fire('Atenção!', 'Por favor, preencha todos os campos do formulário.', 'error');
-      throw new ExceptionDefault('Por favor informe todos os campos');
+      throw new ExceptionDefault('Por favor, informe todos os campos');
     }
   }
+
 
   updateUsuario() {
     if (this.usuario.nome && this.usuario.telefone && this.usuario.email) {
@@ -59,8 +65,8 @@ export class FormUsuarioComponent implements OnInit {
   }
 
   deleteUsuario() {
-    if (this.usuario.id) {
-      this.servUsuario.deleteUsuario(this.usuario.id).subscribe(
+    if (this.usuario.idUsuario) {
+      this.servUsuario.deleteUsuario(this.usuario.idUsuario).subscribe(
         () => {
           // Realize as ações necessárias, como redirecionar para a lista de usuários
         },

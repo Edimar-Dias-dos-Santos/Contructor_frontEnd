@@ -1,6 +1,6 @@
 export interface Usuario {
 
-    id: string;
+    idUsuario: string;
     permissao: boolean;
     nome: string;
     telefone: string;

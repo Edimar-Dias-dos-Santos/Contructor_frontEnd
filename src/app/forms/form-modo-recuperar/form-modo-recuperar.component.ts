@@ -36,20 +36,20 @@ export class FormModoRecuperarComponent implements OnInit {
   }
 
   setRecuperaLogin() {
+
     if (this.recuperaLogin.numeroDocumento && this.recuperaLogin.dataNascimento && this.recuperaLogin.ultimoNome) {
       if (this.servUsuario.usuarioAtual) {
-        this.recuperaLogin.idUsuario = this.servUsuario.usuarioAtual.id; // Define o idUsuario com base no usuário atual
+        this.recuperaLogin.idUsuario = this.servUsuario.usuarioAtual.idUsuario;
 
         this.recuperaLoginService.setRecuperaLogin(this.recuperaLogin).subscribe(
           novoRecuperaLogin => {
             // Manipule os dados do recuperaLogin criado conforme necessário
             console.log('RecuperaLogin criado:', novoRecuperaLogin);
-            this.router.navigateByUrl('/FormCriacaoLogin'); // Redireciona para o formulário de login
+            this.router.navigateByUrl('/FormCriacaoLogin');
           },
           error => {
             Swal.fire('Atenção!', 'Ocorreu um erro ao criar o login:', 'error');
             throw new ExceptionDefault('Por favor informe todos os campos');
-
           }
         );
       } else {
@@ -59,7 +59,6 @@ export class FormModoRecuperarComponent implements OnInit {
     } else {
       Swal.fire('Atenção!', 'Por favor, preencha todos os campos do formulário.', 'error');
       throw new ExceptionDefault('Por favor, preencha todos os campos do formulário.');
-
     }
   }
 }
