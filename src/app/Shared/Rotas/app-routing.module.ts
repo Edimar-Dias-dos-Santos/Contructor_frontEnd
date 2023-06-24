@@ -14,6 +14,7 @@ import { ReclamacoesADMComponent } from 'src/app/constructorADM/reclamacoes-adm/
 import { EstatisticasADMComponent } from 'src/app/constructorADM/estatisticas-adm/estatisticas-adm.component';
 import { ControleUsuariosADMComponent } from 'src/app/constructorADM/controle-usuarios-adm/controle-usuarios-adm.component';
 import { ControleAdministradoresADMComponent } from 'src/app/constructorADM/controle-administradores-adm/controle-administradores-adm.component';
+import { FormCliFornecComponent } from 'src/app/forms/form-cli-fornec/form-cli-fornec.component';
 
 
 
@@ -75,6 +76,10 @@ const routes: Routes = [
   {
     path : "ControleAdministradoresADM",
     component: ControleAdministradoresADMComponent
+  },
+  {
+    path: "FormCliFornec",
+    component: FormCliFornecComponent
   }
   
 
