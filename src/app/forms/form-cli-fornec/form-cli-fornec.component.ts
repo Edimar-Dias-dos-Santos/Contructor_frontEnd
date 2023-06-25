@@ -44,13 +44,21 @@ export class FormCliFornecComponent implements OnInit {
       throw new ExceptionDefault('Por favor informe todos os campos');
     }
 
+    if(!this.cliFornec.descricao || !this.cliFornec.valor || !this.cliFornec.diasQueTrabalha){
+      Swal.fire('Atenção!', 'todos os campos do formulário devem ser preenchidos', 'error');
+      throw new ExceptionDefault('Por favor informe todos os campos');
+
+    }
+
     this.cliFornec.idUsuario = this.servUsuario.usuarioAtual.idUsuario;
 
     this.cliFornecService.setCliFornec(this.cliFornec)
       .subscribe(
         (cliFornec: CliFornec) => {
           console.log('CliFornec criado:', cliFornec);
-          // Faça qualquer manipulação adicional necessária após a criação do cliFornec
+          
+          Swal.fire('Excelente!', 'Muito obrigado, agora vamos responder as demais informações', 'success');
+          this.router.navigateByUrl('/FormModoRecuperar');
         },
         (error: any) => {
           Swal.fire('Obs!', 'Ocorreu um erro ao criar um cadastro de serviço:', 'error');

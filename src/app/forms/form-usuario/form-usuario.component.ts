@@ -36,7 +36,8 @@ export class FormUsuarioComponent implements OnInit {
         resposta => {
           console.log('Resposta do servidor:', resposta); // Verifique a resposta recebida do servidor
            
-  
+            Swal.fire('Excelente!', 'Muito obrigado, agora vamos responder as demais informações', 'success');
+
             this.usuario.idUsuario = resposta.idUsuario;
             this.servUsuario.setUsuarioAtual(this.usuario);
             this.router.navigateByUrl('/tipoCadastro');

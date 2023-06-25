@@ -44,6 +44,7 @@ export class FormModoRecuperarComponent implements OnInit {
         this.recuperaLoginService.setRecuperaLogin(this.recuperaLogin).subscribe(
           novoRecuperaLogin => {
             // Manipule os dados do recuperaLogin criado conforme necessário
+            Swal.fire('Excelente!', ' Muito obrigado, agora vamos responder as demais informações', 'success');
             console.log('RecuperaLogin criado:', novoRecuperaLogin);
             this.router.navigateByUrl('/FormCriacaoLogin');
           },
