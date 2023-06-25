@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
 export class FormCriacaoLoginComponent implements OnInit {
 
   login !: Login;
-  confiracaoSenha !: string
+  confiracaoSenha !: string;
 
   constructor(
     private servLoginServiceService: ServLoginServiceService,

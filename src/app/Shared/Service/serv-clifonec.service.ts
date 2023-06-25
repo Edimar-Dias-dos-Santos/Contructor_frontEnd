@@ -11,7 +11,7 @@ export class ServClifonecService {
 
   constructor(private http: HttpClient) {}
 
-  saveCliFornec(cliFornec: CliFornec): Observable<CliFornec> {
+  setCliFornec(cliFornec: CliFornec): Observable<CliFornec> {
     return this.http.post<CliFornec>(this.baseUrl, cliFornec);
   }
 
