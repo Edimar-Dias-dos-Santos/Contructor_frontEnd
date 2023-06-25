@@ -25,6 +25,7 @@ import { ControleAdministradoresADMComponent } from './constructorADM/controle-a
 import { FormCliFornecComponent } from './forms/form-cli-fornec/form-cli-fornec.component';
 import { PerfilUsuarioComponent } from './PerfilUsuario/perfil-usuario/perfil-usuario.component';
 import { UsuarioImgsComponent } from './PerfilUsuario/usuario-imgs/usuario-imgs.component';
+import { UsuarioimgPerfilComponent } from './PerfilUsuario/usuarioimg-perfil/usuarioimg-perfil.component';
 
 
 
@@ -52,7 +53,8 @@ import { UsuarioImgsComponent } from './PerfilUsuario/usuario-imgs/usuario-imgs.
     ControleAdministradoresADMComponent,
     FormCliFornecComponent,
     PerfilUsuarioComponent,
-    UsuarioImgsComponent
+    UsuarioImgsComponent,
+    UsuarioimgPerfilComponent
   ],
   imports: [
     HttpClientModule,
