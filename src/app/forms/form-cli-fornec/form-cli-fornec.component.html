@@ -1,1 +1,27 @@
-<p>form-cli-fornec works!</p>
+<div class="container mt-5" style="padding-top: 6rem;">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <span>Trabalhar é bom, conte-nos sobre você.</span>
+        </div>
+        <div class="mb-3">
+          <label for="diasQueTrabalha" class="form-label"><b>Quantidade de dias que estou disponível para Trabalhar durante a semana:</b></label>
+          <input  type="number" class="form-control" id="diasQueTrabalha" name="diasQueTrabalha" [(ngModel)]="cliFornec.diasQueTrabalha" required>
+        </div>
+        <div class="mb-3">
+          <label for="descricao" class="form-label"><b>Faça uma descrição de quem você é:</b></label>
+          <textarea placeholder="Exemplo: Eu sou muito proativo e amo trabalhar, so muito bom no que eu faço. Sou uma pessoa respeitosa, cordial, esforçada e produtiva."   class="form-control" id="descricao" name="descricao" [(ngModel)]="cliFornec.descricao" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="valor" class="form-label"><b>Informe o valor médio de sua diária:</b></label>
+          <div class="input-group">
+            <span class="input-group-text" id="dinheiro">R$</span>
+            <input type="number" class="form-control" id="valor" name="valor" [(ngModel)]="cliFornec.valor" required step="0.01">
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button class="button" type="submit" (click)="setCliFornec()">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
