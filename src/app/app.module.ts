@@ -10,7 +10,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
 import { CategoriasComponent } from './Components/categorias/categorias.component';
-import { SugestoesComponent } from './Components/sugestoes/sugestoes.component';
+import { SugestoesComponent } from './forms/sugestoes/sugestoes.component';
 import { PerfilComponent } from './Components/perfil/perfil.component';
 import { TipoCadastroComponent } from './Components/tipo-cadastro/tipo-cadastro.component';
 import { FormModoRecuperarComponent } from './forms/form-modo-recuperar/form-modo-recuperar.component';

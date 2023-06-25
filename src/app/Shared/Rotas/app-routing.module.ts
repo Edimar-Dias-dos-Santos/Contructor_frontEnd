@@ -3,7 +3,7 @@ import { FormModoRecuperarComponent } from 'src/app/forms/form-modo-recuperar/fo
 import { TipoCadastroComponent } from 'src/app/Components/tipo-cadastro/tipo-cadastro.component';
 import { FormUsuarioComponent } from 'src/app/forms/form-usuario/form-usuario.component';
 import { PerfilComponent } from '../../Components/perfil/perfil.component';
-import { SugestoesComponent } from '../../Components/sugestoes/sugestoes.component';
+import { SugestoesComponent } from '../../forms/sugestoes/sugestoes.component';
 import { CategoriasComponent } from '../../Components/categorias/categorias.component';
 import { LoginComponent } from '../../Components/login/login.component';
 import { FormCriacaoLoginComponent } from 'src/app/forms/form-criacao-login/form-criacao-login.component';
