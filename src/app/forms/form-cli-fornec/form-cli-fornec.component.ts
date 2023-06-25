@@ -29,7 +29,7 @@ export class FormCliFornecComponent implements OnInit {
 
   iniciarCliFornec(): CliFornec{
      return {
-      id: '',
+      idCliFornec: '',
       idUsuario: this.servUsuario.usuarioAtual?.idUsuario || '',
       diasQueTrabalha: 0,
       descricao: '',

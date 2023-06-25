@@ -1,6 +1,6 @@
 export interface CliFornec {
 
-    id: string;
+    idCliFornec: string;
     idUsuario: string;
     diasQueTrabalha: number;
     descricao: string;
