@@ -15,6 +15,8 @@ import { EstatisticasADMComponent } from 'src/app/constructorADM/estatisticas-ad
 import { ControleUsuariosADMComponent } from 'src/app/constructorADM/controle-usuarios-adm/controle-usuarios-adm.component';
 import { ControleAdministradoresADMComponent } from 'src/app/constructorADM/controle-administradores-adm/controle-administradores-adm.component';
 import { FormCliFornecComponent } from 'src/app/forms/form-cli-fornec/form-cli-fornec.component';
+import { UsuarioImgsComponent } from 'src/app/PerfilUsuario/usuario-imgs/usuario-imgs.component';
+
 
 
 
@@ -80,8 +82,12 @@ const routes: Routes = [
   {
     path: "FormCliFornec",
     component: FormCliFornecComponent
+  },
+  {
+    path: "UsuarioImgs",
+    component: UsuarioImgsComponent
   }
-  
+ 
 
 
 ];

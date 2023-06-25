@@ -23,6 +23,8 @@ import { EstatisticasADMComponent } from './constructorADM/estatisticas-adm/esta
 import { ControleUsuariosADMComponent } from './constructorADM/controle-usuarios-adm/controle-usuarios-adm.component';
 import { ControleAdministradoresADMComponent } from './constructorADM/controle-administradores-adm/controle-administradores-adm.component';
 import { FormCliFornecComponent } from './forms/form-cli-fornec/form-cli-fornec.component';
+import { PerfilUsuarioComponent } from './PerfilUsuario/perfil-usuario/perfil-usuario.component';
+import { UsuarioImgsComponent } from './PerfilUsuario/usuario-imgs/usuario-imgs.component';
 
 
 
@@ -48,7 +50,9 @@ import { FormCliFornecComponent } from './forms/form-cli-fornec/form-cli-fornec.
     EstatisticasADMComponent,
     ControleUsuariosADMComponent,
     ControleAdministradoresADMComponent,
-    FormCliFornecComponent
+    FormCliFornecComponent,
+    PerfilUsuarioComponent,
+    UsuarioImgsComponent
   ],
   imports: [
     HttpClientModule,
