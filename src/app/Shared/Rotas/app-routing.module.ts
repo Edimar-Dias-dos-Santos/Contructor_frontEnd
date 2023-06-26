@@ -17,6 +17,7 @@ import { ControleAdministradoresADMComponent } from 'src/app/constructorADM/cont
 import { FormCliFornecComponent } from 'src/app/forms/form-cli-fornec/form-cli-fornec.component';
 import { UsuarioImgsComponent } from 'src/app/PerfilUsuario/usuario-imgs/usuario-imgs.component';
 import { UsuarioimgPerfilComponent } from 'src/app/PerfilUsuario/usuarioimg-perfil/usuarioimg-perfil.component';
+import {ConstructorADMComponent} from 'src/app/constructorADM/constructor-adm/constructor-adm.component'
 
 
 
@@ -91,10 +92,12 @@ const routes: Routes = [
   {
     path: "UsuarioimgPerfil",
     component: UsuarioimgPerfilComponent
+  },
+  {
+    path: "ConstructorADM",
+    component: ConstructorADMComponent
   }
  
-
-
 ];
 
 @NgModule({
