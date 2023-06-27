@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/Shared/Service/header-service.service';
 
 @Component({
   selector: 'app-perfil-usuario',
   templateUrl: './perfil-usuario.component.html',
   styleUrls: ['./perfil-usuario.component.scss']
 })
-export class PerfilUsuarioComponent {
-  isSidebarOpen: boolean = false;
+export class PerfilUsuarioComponent implements OnInit{
 
-  toggleSidebar() {
-    this.isSidebarOpen = !this.isSidebarOpen;
+
+  constructor(private headerService: HeaderService) { }
+
+  ngOnInit(): void {
+    this.headerService.setShowHeader(false); 
+    this.headerService.setShowHeaderAdm(false);
+    this.headerService.setShowheaderPerfilComponentshow(true);
+ 
   }
+
 }

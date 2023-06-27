@@ -27,6 +27,8 @@ import { PerfilUsuarioComponent } from './PerfilUsuario/perfil-usuario/perfil-us
 import { UsuarioImgsComponent } from './PerfilUsuario/usuario-imgs/usuario-imgs.component';
 import { UsuarioimgPerfilComponent } from './PerfilUsuario/usuarioimg-perfil/usuarioimg-perfil.component';
 import { HeaderADMComponent } from './constructorADM/header-adm/header-adm.component';
+import { headerPerfilComponent } from './PerfilUsuario/headerPerfil/header-perfil.component';
+
 
 
 
@@ -56,7 +58,8 @@ import { HeaderADMComponent } from './constructorADM/header-adm/header-adm.compo
     PerfilUsuarioComponent,
     UsuarioImgsComponent,
     UsuarioimgPerfilComponent,
-    HeaderADMComponent
+    HeaderADMComponent,
+    headerPerfilComponent
   ],
   imports: [
     HttpClientModule,

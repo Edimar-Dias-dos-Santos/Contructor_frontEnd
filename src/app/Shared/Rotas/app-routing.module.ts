@@ -19,6 +19,7 @@ import { UsuarioImgsComponent } from 'src/app/PerfilUsuario/usuario-imgs/usuario
 import { UsuarioimgPerfilComponent } from 'src/app/PerfilUsuario/usuarioimg-perfil/usuarioimg-perfil.component';
 import {ConstructorADMComponent} from 'src/app/constructorADM/constructor-adm/constructor-adm.component'
 import {PerfilUsuarioComponent} from 'src/app/PerfilUsuario/perfil-usuario/perfil-usuario.component';
+import {headerPerfilComponent} from 'src/app/PerfilUsuario/headerPerfil/header-perfil.component';
 
 
 

@@ -1,32 +1,4 @@
-<div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
-    <ul>
-      <li class="active">
-        <span class="menu-item">
-          <i class="fas fa-home"></i>
-          Início
-        </span>
-        <button class="toggle-btn" [class.reposition]="isSidebarOpen" (click)="toggleSidebar()">
-          <i class="fas fa-bars"></i>
-        </button>
-      </li>
-      <li><a href="#perfil"><i class="fas fa-users"></i> Perfil</a></li>
-      <li><a routerLink="/UsuarioimgPerfil"><i class="fas fa-image"></i> Atualizar foto de perfil</a></li>
-      <li><a  routerLink="/UsuarioImgs"><i class="fas fa-camera"></i> Postar fotos de trabalho</a></li>
-      <li><a href="#favoritos"><i class="fas fa-star"></i> Favoritos</a></li>
-      <li><a href="#feedbacks"><i class="fas fa-comment"></i> Feedbacks</a></li>
-      <li><a href="#deslogar"><i class="fas fa-sign-out-alt"></i> Deslogar</a></li>
-      
-    </ul>
-  </div>
-  
-  <div class="content">
-    
-    <p>Bem-vindo ao painel de administração!</p>
 
-
-            <router-outlet></router-outlet>
-  
-      </div>
       
 
       

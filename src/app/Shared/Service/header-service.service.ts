@@ -6,22 +6,31 @@ import { Injectable } from '@angular/core';
 export class HeaderService {
   private showHeader: boolean = true;
   private showHeaderAdm: boolean = false;
-
-  setShowHeader(show: boolean): void {
-    this.showHeader = show;
-  }
+  private showheaderPerfilComponent : boolean= false;
 
   getShowHeader(): boolean {
     return this.showHeader;
   }
 
 
+  getShowHeaderAdm(): boolean {
+    return this.showHeaderAdm;
+  }
+
+  getShowheaderPerfilComponent(): boolean{
+      return this.showheaderPerfilComponent;
+  }
+
+  setShowHeader(show: boolean): void {
+    this.showHeader = show;
+  }
+
   setShowHeaderAdm(show: boolean): void {
     this.showHeaderAdm = show;
   }
 
-  getShowHeaderAdm(): boolean {
-    return this.showHeaderAdm;
+  setShowheaderPerfilComponentshow(show: boolean): void{
+        this.showheaderPerfilComponent = show;
   }
 
 
