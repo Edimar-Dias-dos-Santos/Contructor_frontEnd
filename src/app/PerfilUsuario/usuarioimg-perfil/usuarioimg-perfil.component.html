@@ -1,27 +1,17 @@
 <div>
-    <img class="profile-picture" src="caminho/para/foto_de_perfil.jpg" alt="Foto de Perfil">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="text-center">
+          <img src="perfil.jpg" class="rounded-circle img-thumbnail" alt="Foto de Perfil" style="width: 200px; height: 200px;">
+          <h4 class="mt-3">Nome do Usuário</h4>
+        </div>
+        <div class="text-center mt-4">
+          <label for="uploadFoto" class="btn btn-primary">Atualizar Foto de perfil</label>
+          <input type="file" id="uploadFoto" style="display: none;">
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <div>
-    <label for="name">Nome:</label>
-    <input type="text" id="name" name="name" value="Nome do Usuário" disabled>
-    <button class="edit-button" onclick="enableInput('name')">Editar</button>
-  </div>
-  
-  <div>
-    <label for="whatsapp">Whatsapp:</label>
-    <input type="text" id="whatsapp" name="whatsapp" value="Número de Whatsapp" disabled>
-    <button class="edit-button" onclick="enableInput('whatsapp')">Editar</button>
-  </div>
-  
-  <div>
-    <label for="description">Descrição:</label>
-    <textarea id="description" name="description" rows="4" cols="50" disabled>Descrição do Usuário</textarea>
-    <button class="edit-button" onclick="enableInput('description')">Editar</button>
-  </div>
-  
-  <div>
-    <label for="daily-rate">Valor Médio da Diária:</label>
-    <input type="text" id="daily-rate" name="daily-rate" value="R$ 100,00" disabled>
-    <button class="edit-button" onclick="enableInput('daily-rate')">Editar</button>
-  </div>
+
+</div>
