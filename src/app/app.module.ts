@@ -26,6 +26,7 @@ import { FormCliFornecComponent } from './forms/form-cli-fornec/form-cli-fornec.
 import { PerfilUsuarioComponent } from './PerfilUsuario/perfil-usuario/perfil-usuario.component';
 import { UsuarioImgsComponent } from './PerfilUsuario/usuario-imgs/usuario-imgs.component';
 import { UsuarioimgPerfilComponent } from './PerfilUsuario/usuarioimg-perfil/usuarioimg-perfil.component';
+import { HeaderADMComponent } from './constructorADM/header-adm/header-adm.component';
 
 
 
@@ -54,7 +55,8 @@ import { UsuarioimgPerfilComponent } from './PerfilUsuario/usuarioimg-perfil/usu
     FormCliFornecComponent,
     PerfilUsuarioComponent,
     UsuarioImgsComponent,
-    UsuarioimgPerfilComponent
+    UsuarioimgPerfilComponent,
+    HeaderADMComponent
   ],
   imports: [
     HttpClientModule,

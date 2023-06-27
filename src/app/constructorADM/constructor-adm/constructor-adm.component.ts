@@ -12,6 +12,7 @@ export class ConstructorADMComponent implements OnInit {
 
   ngOnInit(): void {
     this.headerService.setShowHeader(false); // Oculta o cabeçalho
+    this.headerService.setShowHeaderAdm(true);
   }
 
 }
