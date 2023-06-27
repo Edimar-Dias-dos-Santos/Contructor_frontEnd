@@ -18,6 +18,7 @@ import { FormCliFornecComponent } from 'src/app/forms/form-cli-fornec/form-cli-f
 import { UsuarioImgsComponent } from 'src/app/PerfilUsuario/usuario-imgs/usuario-imgs.component';
 import { UsuarioimgPerfilComponent } from 'src/app/PerfilUsuario/usuarioimg-perfil/usuarioimg-perfil.component';
 import {ConstructorADMComponent} from 'src/app/constructorADM/constructor-adm/constructor-adm.component'
+import {PerfilUsuarioComponent} from 'src/app/PerfilUsuario/perfil-usuario/perfil-usuario.component';
 
 
 
@@ -96,6 +97,10 @@ const routes: Routes = [
   {
     path: "ConstructorADM",
     component: ConstructorADMComponent
+  },
+  {
+    path : "PerfilUsuario",
+    component: PerfilUsuarioComponent
   }
  
 ];

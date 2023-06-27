@@ -17,24 +17,23 @@ export class LoginComponent {
   autenticarUsuario(username: string, password: string): void {
     this.loginAdmService.authenticateUser(username, password).subscribe(
       (loginResponse: any) => {
-        // Autenticação bem-sucedida como autenticarUsuarioAdm
-        Swal.fire('Atenção!', 'Sou autenticarUsuarioAdm', 'success');
-        // Salvar o código de resposta em uma variável, se necessário
+         Swal.fire('Atenção!', 'Sou autenticarUsuarioAdm', 'success');
+        this.router.navigateByUrl('/ConstructorADM');
+        
+       
         const responseCode = loginResponse.code;
-        // Realizar as ações específicas para autenticarUsuarioAdm
-        // ...
+     
       },
       (error) => {
-        // Não autenticado como autenticarUsuarioAdm, tentar autenticar como autenticarUsuario
+
         this.loginService.authenticateUser(username, password).subscribe(
           (login: Login) => {
-            // Autenticação bem-sucedida como autenticarUsuario
             Swal.fire('Atenção!', 'Sou autenticarUsuario', 'success');
-            // Realizar as ações específicas para autenticarUsuario
-            // ...
+            this.router.navigateByUrl('/PerfilUsuario');
+           
           },
           (error) => {
-            // Não autenticado como autenticarUsuario
+         
             alert('Eu não existo!');
           }
         );
