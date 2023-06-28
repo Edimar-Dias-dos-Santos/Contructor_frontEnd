@@ -4,6 +4,7 @@ import { ServLoginServiceService } from 'src/app/Shared/Service/serv-login-servi
 import { ServLoginConstructoAdmService } from 'src/app/Shared/Service/serv-login-constructo-adm.service';
 import Swal from 'sweetalert2';
 import { Login } from 'src/app/Shared/Model/Login';
+import { SharedDataService } from 'src/app/Shared/Service/GeneralData/shared-data.service';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +16,14 @@ export class LoginComponent {
   constructor(
     private loginService: ServLoginServiceService,
     private loginAdmService: ServLoginConstructoAdmService,
+    private sharedDataService: SharedDataService,
     private router: Router
   ) { }
 
   autenticarUsuario(username: string, password: string): void {
     this.loginAdmService.authenticateUser(username, password)
       .subscribe(
-        (loginResponse: any) => {
+        () => {
           this.handleAdminAuthenticationSuccess();
         },
         (error) => {
@@ -39,6 +41,8 @@ export class LoginComponent {
     this.loginService.authenticateUser(username, password)
       .subscribe(
         (login: Login) => {
+          const idUsuario = login.idUsuario;
+          this.sharedDataService.setidUsuario(idUsuario);
           this.handleUserAuthenticationSuccess();
         },
         (error) => {
