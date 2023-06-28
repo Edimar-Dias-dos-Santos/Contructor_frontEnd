@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HeaderService } from 'src/app/Shared/Service/header-service.service';
+import { HeaderService } from 'src/app/Shared/Service/HeadersControl/header-service.service';
 
 @Component({
   selector: 'app-header-Perfil',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from 'src/app/Shared/Service/header-service.service';
+import { HeaderService } from 'src/app/Shared/Service/HeadersControl/header-service.service';
 
 @Component({
   selector: 'app-perfil-usuario',
