@@ -58,7 +58,7 @@ export class FormCliFornecComponent implements OnInit {
           console.log('CliFornec criado:', cliFornec);
           
           Swal.fire('Excelente!', 'Muito obrigado, agora vamos responder as demais informações', 'success');
-          this.router.navigateByUrl('/FormModoRecuperar');
+          
         },
         (error: any) => {
           Swal.fire('Obs!', 'Ocorreu um erro ao criar um cadastro de serviço:', 'error');
