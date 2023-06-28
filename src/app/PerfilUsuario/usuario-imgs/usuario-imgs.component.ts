@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServUsuarioServImgService } from 'src/app/Shared/Service/serv-usuario-serv-img.service';
 import { UsuarioServImg } from 'src/app/Shared/Model/UsuarioServImg';
-
+import { SharedDataService } from 'src/app/Shared/Service/GeneralData/shared-data.service';
 @Component({
   selector: 'app-usuario-imgs',
   templateUrl: './usuario-imgs.component.html',
@@ -11,7 +11,7 @@ export class UsuarioImgsComponent implements OnInit {
   usuarioServImgs: UsuarioServImg[] = [];
   selectedFile: File | null = null;
 
-  constructor(private servUsuarioServImgService: ServUsuarioServImgService) { }
+  constructor(private servUsuarioServImgService: ServUsuarioServImgService, private sharedDataService: SharedDataService) { }
 
   ngOnInit(): void {
     this.getUsuarioServImgs();
@@ -31,12 +31,13 @@ export class UsuarioImgsComponent implements OnInit {
   postarFoto(event: Event): void {
     event.preventDefault();
     if (this.selectedFile) {
-      this.saveUsuarioServImg('idCliFornec', this.selectedFile);
+      const idUsuario = this.sharedDataService.getidUsuario();
+      this.saveUsuarioServImg(idUsuario, this.selectedFile);
     }
   }
 
-  saveUsuarioServImg(idCliFornec: string, image: File): void {
-    this.servUsuarioServImgService.saveUsuarioServImg(idCliFornec, image).subscribe(
+  saveUsuarioServImg(idUsuario: string, image: File): void {
+    this.servUsuarioServImgService.saveUsuarioServImg(idUsuario, image).subscribe(
       usuarioServImg => {
         // Lógica após salvar a imagem do usuário de serviço
         this.getUsuarioServImgs(); // Atualiza a lista de imagens
