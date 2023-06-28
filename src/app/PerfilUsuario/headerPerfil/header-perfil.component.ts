@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from 'src/app/Shared/Service/header-service.service';
 
 @Component({
   selector: 'app-header-Perfil',
@@ -9,13 +10,17 @@ import { Router } from '@angular/router';
 export class headerPerfilComponent {
 
   constructor(
-    private router: Router
+    private router: Router, private headerService: HeaderService
   ) { }
 
 
   limparCacheContextoERefresh(): void {
-    this.limparCache();
-    this.fazerRefresh();
+   
+    this.headerService.setShowHeader(true);
+    this.headerService.setShowheaderPerfilComponentshow(false);
+    this.headerService.setShowHeaderAdm(false);
+    this.router.navigateByUrl('/');
+
   }
   
   limparCache(): void {
