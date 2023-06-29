@@ -7,3 +7,12 @@ h1{ margin-bottom: 5px;
     position: relative;
     z-index: 1;
 }
+
+.text-right {
+    text-align: right;
+  }
+  
+  .text-right button {
+    float: right;
+    margin-left: 5px; /* Ajuste o valor conforme necessário */
+  }
