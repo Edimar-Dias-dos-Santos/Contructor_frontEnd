@@ -28,6 +28,7 @@ import { UsuarioImgsComponent } from './PerfilUsuario/usuario-imgs/usuario-imgs.
 import { UsuarioimgPerfilComponent } from './PerfilUsuario/usuarioimg-perfil/usuarioimg-perfil.component';
 import { HeaderADMComponent } from './constructorADM/header-adm/header-adm.component';
 import { headerPerfilComponent } from './PerfilUsuario/headerPerfil/header-perfil.component';
+import { CliFornecCrudComponent } from './PerfilUsuario/cli-fornec-crud/cli-fornec-crud.component';
 
 
 
@@ -59,7 +60,8 @@ import { headerPerfilComponent } from './PerfilUsuario/headerPerfil/header-perfi
     UsuarioImgsComponent,
     UsuarioimgPerfilComponent,
     HeaderADMComponent,
-    headerPerfilComponent
+    headerPerfilComponent,
+    CliFornecCrudComponent
   ],
   imports: [
     HttpClientModule,
