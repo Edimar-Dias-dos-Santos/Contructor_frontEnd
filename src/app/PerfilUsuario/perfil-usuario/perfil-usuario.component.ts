@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HeaderService } from 'src/app/Shared/Service/HeadersControl/header-service.service';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
-import { SharedDataService } from 'src/app/Shared/Service/GeneralData/shared-data.service';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -16,8 +15,7 @@ export class PerfilUsuarioComponent implements OnInit {
 
   constructor(
     private headerService: HeaderService,
-    private servUsuario: ServUsuario,
-    private sharedDataService: SharedDataService
+    private servUsuario: ServUsuario
   ) { }
 
   ngOnInit(): void {
@@ -29,18 +27,21 @@ export class PerfilUsuarioComponent implements OnInit {
   }
 
   obterUsuarioAtual(): void {
-    const idUsuarioAtual = this.sharedDataService.getidUsuario();
+    debugger
+    const idUsuarioAtual = localStorage.getItem('idUsuario');
 
-    this.servUsuario.getUsuario(idUsuarioAtual).subscribe(
-      (usuario: Usuario) => {
-        this.usuarioAtual = usuario;
-        this.nomeEditado = usuario.nome;
-        this.telefoneEditado = usuario.telefone;
-      },
-      (error: any) => {
-        console.error('Ocorreu um erro ao obter o usuário atual:', error);
-      }
-    );
+    if (idUsuarioAtual) {
+      this.servUsuario.getUsuario(idUsuarioAtual).subscribe(
+        (usuario: Usuario) => {
+          this.usuarioAtual = usuario;
+          this.nomeEditado = usuario.nome;
+          this.telefoneEditado = usuario.telefone;
+        },
+        (error: any) => {
+          console.error('Ocorreu um erro ao obter o usuário atual:', error);
+        }
+      );
+    }
   }
 
   atualizarUsuario(): void {

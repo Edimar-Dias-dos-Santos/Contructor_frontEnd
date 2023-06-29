@@ -30,8 +30,9 @@ export class FormCriacaoLoginComponent implements OnInit {
 
   iniciarLogin(): Login {
     return {
-      
+      idLogin: '',
       idUsuario: '',
+      codigoLogado: '',
       password: '',
       username: this.servUsuario.usuarioAtual?.email || ''
     };
@@ -43,6 +44,7 @@ export class FormCriacaoLoginComponent implements OnInit {
     if (this.servUsuario.usuarioAtual) {
       this.login.username = this.servUsuario.usuarioAtual.email;
       this.login.idUsuario = this.servUsuario.usuarioAtual.idUsuario;
+      this.login.codigoLogado = this.servUsuario.usuarioAtual.idUsuario;
     }
 
     if (!this.confiracaoSenha || !this.login.password) {

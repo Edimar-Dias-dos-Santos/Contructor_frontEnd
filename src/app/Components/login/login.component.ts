@@ -33,17 +33,28 @@ export class LoginComponent {
   }
 
   private handleAdminAuthenticationSuccess(): void {
-    Swal.fire('Atenção!', 'Sou autenticarUsuarioAdm', 'success');
-    this.router.navigateByUrl('/ConstructorADM');
+    Swal.fire('Atenção!', 'Sou autenticarUsuarioAdm', 'success').then(() => {
+      this.router.navigateByUrl('/ConstructorADM');
+    });
   }
 
   private handleUserAuthenticationError(username: string, password: string): void {
     this.loginService.authenticateUser(username, password)
       .subscribe(
         (login: Login) => {
-          const idUsuario = login.idUsuario;
-          this.sharedDataService.setidUsuario(idUsuario);
-          this.handleUserAuthenticationSuccess();
+          // Retrieve the complete login object by its ID
+          this.loginService.getLoginById(login.idLogin)
+            .subscribe(
+              (completeLogin: Login) => {
+                // Save the idUsuario in local storage
+                localStorage.setItem('idUsuario', completeLogin.codigoLogado.toString());
+  
+                this.handleUserAuthenticationSuccess();
+              },
+              (error) => {
+                this.handleAuthenticationFailure();
+              }
+            );
         },
         (error) => {
           this.handleAuthenticationFailure();
@@ -52,8 +63,9 @@ export class LoginComponent {
   }
 
   private handleUserAuthenticationSuccess(): void {
-    Swal.fire('Atenção!', 'Sou autenticarUsuario', 'success');
-    this.router.navigateByUrl('/PerfilUsuario');
+    Swal.fire('Atenção!', 'Sou autenticarUsuario', 'success').then(() => {
+      this.router.navigateByUrl('/PerfilUsuario');
+    });
   }
 
   private handleAuthenticationFailure(): void {
