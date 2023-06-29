@@ -7,11 +7,14 @@ import { SharedDataService } from 'src/app/Shared/Service/GeneralData/shared-dat
   templateUrl: './usuario-imgs.component.html',
   styleUrls: ['./usuario-imgs.component.scss']
 })
+
 export class UsuarioImgsComponent implements OnInit {
   usuarioServImgs: UsuarioServImg[] = [];
-  selectedFile: File | null = null;
+  
+  file: File | null = null;
 
-  constructor(private servUsuarioServImgService: ServUsuarioServImgService, private sharedDataService: SharedDataService) { }
+  constructor(private servUsuarioServImgService: ServUsuarioServImgService, 
+    private sharedDataService: SharedDataService) { }
 
   ngOnInit(): void {
     this.getUsuarioServImgs();
@@ -28,11 +31,18 @@ export class UsuarioImgsComponent implements OnInit {
     );
   }
 
-  postarFoto(event: Event): void {
-    event.preventDefault();
-    if (this.selectedFile) {
+  
+  onChange(event : any) {
+    this.file = event.target.files[0]
+    
+  }
+
+  postarFoto(): void {
+   
+    if (this.file) {
+      console.log('file', this.file)
       const idUsuario = this.sharedDataService.getidUsuario();
-      this.saveUsuarioServImg(idUsuario, this.selectedFile);
+      this.saveUsuarioServImg(idUsuario, this.file);
     }
   }
 
@@ -41,7 +51,7 @@ export class UsuarioImgsComponent implements OnInit {
       usuarioServImg => {
         // Lógica após salvar a imagem do usuário de serviço
         this.getUsuarioServImgs(); // Atualiza a lista de imagens
-        this.selectedFile = null; // Limpa a seleção de arquivo
+        this.file = null; // Limpa a seleção de arquivo
       },
       error => {
         // Trate possíveis erros
