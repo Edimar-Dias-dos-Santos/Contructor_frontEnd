@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ServSugestaoAdmService } from 'src/app/Shared/Service/serv-sugestao-adm.service';
 import { SugestaoAdm } from 'src/app/Shared/Model/SugestaoAdm';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sugestoes',
@@ -19,12 +20,21 @@ export class SugestoesComponent {
   criarSugestao() {
     this.sugestaoService.criarSugestaoAdm(this.novaSugestao).subscribe(
       (response) => {
-        console.log('Sugestão criada:', response);
+        Swal.fire('Excelente!', 'Muito obrigado pela sugestão!', 'success');
+        this.limparCampos();
       },
       (error) => {
         console.error('Erro ao criar sugestão:', error);
       }
     );
+  }
+  
+  limparCampos() {
+    this.novaSugestao = {
+      idSugestaoAdm: '',
+      nome: '',
+      descricao: ''
+    };
   }
 
   obterTodasSugestoes() {
