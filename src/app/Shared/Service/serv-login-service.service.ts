@@ -32,6 +32,11 @@ export class ServLoginServiceService {
     return this.http.put<Login>(`${this.apiUrl}/${id}`, updatedLogin);
   }
 
+  getIdUsuarioByUsernameAndPassword(username: string, password: string): Observable<string> {
+    const params = { username, password };
+    return this.http.get<string>(`${this.apiUrl}/idUsuario`, { params });
+  }
+
   deleteLogin(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
