@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServSugestaoAdmService } from 'src/app/Shared/Service/serv-sugestao-adm.service';
 import { SugestaoAdm } from 'src/app/Shared/Model/SugestaoAdm';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reclamacoes-adm',
@@ -8,9 +9,12 @@ import { SugestaoAdm } from 'src/app/Shared/Model/SugestaoAdm';
   styleUrls: ['./reclamacoes-adm.component.scss']
 })
 export class ReclamacoesADMComponent implements OnInit {
-  sugestoes: SugestaoAdm[] = []; // Initialize sugestoes as an empty array
+  sugestoes: SugestaoAdm[] = [];
 
-  constructor(private sugestaoAdmService: ServSugestaoAdmService) { }
+  constructor(
+    private sugestaoAdmService: ServSugestaoAdmService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getAllSugestoesAdm();
@@ -31,6 +35,8 @@ export class ReclamacoesADMComponent implements OnInit {
     this.sugestaoAdmService.criarSugestaoAdm(sugestaoAdm).subscribe(
       novaSugestao => {
         // Handle success
+        // Reload the component to fetch the updated list of suggestions
+        this.getAllSugestoesAdm();
       },
       error => {
         // Handle error
@@ -53,10 +59,11 @@ export class ReclamacoesADMComponent implements OnInit {
     this.sugestaoAdmService.updateSugestaoAdm(id, sugestaoAdm).subscribe(
       sugestaoAtualizada => {
         // Sugestão administrativa atualizada com sucesso
-        // Faça o que precisar com a sugestão atualizada
+        // Reload the component to fetch the updated list of suggestions
+        this.getAllSugestoesAdm();
       },
       error => {
-        // Trate o erro, se necessário
+        // Handle error
       }
     );
   }
@@ -65,10 +72,11 @@ export class ReclamacoesADMComponent implements OnInit {
     this.sugestaoAdmService.deleteSugestaoAdm(id).subscribe(
       () => {
         // Sugestão administrativa excluída com sucesso
-        // Faça o que precisar após excluir a sugestão
+        // Reload the component to fetch the updated list of suggestions
+        this.getAllSugestoesAdm();
       },
       error => {
-        // Trate o erro, se necessário
+        // Handle error
       }
     );
   }
