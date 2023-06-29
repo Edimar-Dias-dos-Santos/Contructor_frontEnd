@@ -1,1 +1,49 @@
-<p>cli-fornec-crud works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="text-center">Cadastro de CliFornec</h1>
+  
+        <form (ngSubmit)="saveCliFornecServico()" class="mt-4">
+          <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição do Serviço:</label>
+            <select id="descricao" name="descricao" [(ngModel)]="cliFornec.descricao" class="form-select">
+              <option value="Pedreiro">Pedreiro</option>
+              <option value="Marceneiro">Marceneiro</option>
+              <option value="Pintor">Pintor</option>
+              <option value="Eletricista">Eletricista</option>
+              <option value="Encanador">Encanador</option>
+              <option value="Vidraceiro">Vidraceiro</option>
+              <option value="De tudo um pouco">De tudo um pouco</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="diasQueTrabalha" class="form-label">Dias que Trabalha:</label>
+            <input type="number" id="diasQueTrabalha" name="diasQueTrabalha" [(ngModel)]="cliFornec.diasQueTrabalha" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="valor" class="form-label">Valor:</label>
+            <input type="number" id="valor" name="valor" [(ngModel)]="cliFornec.valor" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+        <hr>
+  
+        <div class="col-md-6">
+          <div class="d-flex flex-column justify-content-end">
+            <div class="card mb-3" *ngFor="let cliFornecItem of listaCliFornec">
+              <div class="card-body">
+                <h5 class="card-title">{{ cliFornecItem.descricao }}</h5>
+                <p class="card-text">
+                  Dias que Trabalha: {{ cliFornecItem.diasQueTrabalha }}
+                  <br>
+                  Valor: {{ cliFornecItem.valor }}
+                </p>
+                <button class="btn btn-danger" (click)="removerCliFornec(cliFornecItem.idCliFornec)">
+                  Remover
+                </button>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -8,7 +8,7 @@ import { CategoriasComponent } from '../../Components/categorias/categorias.comp
 import { LoginComponent } from '../../Components/login/login.component';
 import { FormCriacaoLoginComponent } from 'src/app/forms/form-criacao-login/form-criacao-login.component';
 import { MenuFinalCadastroComponent } from 'src/app/Components/menu-final-cadastro/menu-final-cadastro.component';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReclamacoesADMComponent } from 'src/app/constructorADM/reclamacoes-adm/reclamacoes-adm.component';
 import { EstatisticasADMComponent } from 'src/app/constructorADM/estatisticas-adm/estatisticas-adm.component';
@@ -20,6 +20,7 @@ import { UsuarioimgPerfilComponent } from 'src/app/PerfilUsuario/usuarioimg-perf
 import {ConstructorADMComponent} from 'src/app/constructorADM/constructor-adm/constructor-adm.component'
 import {PerfilUsuarioComponent} from 'src/app/PerfilUsuario/perfil-usuario/perfil-usuario.component';
 import {headerPerfilComponent} from 'src/app/PerfilUsuario/headerPerfil/header-perfil.component';
+import { CliFornecCrudComponent } from 'src/app/PerfilUsuario/cli-fornec-crud/cli-fornec-crud.component';
 
 
 
@@ -102,8 +103,11 @@ const routes: Routes = [
   {
     path : "PerfilUsuario",
     component: PerfilUsuarioComponent
+  },
+  {
+    path: "CliFornecCrud",
+    component: CliFornecCrudComponent
   }
- 
 ];
 
 @NgModule({
