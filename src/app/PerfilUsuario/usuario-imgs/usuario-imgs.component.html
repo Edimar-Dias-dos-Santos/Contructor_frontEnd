@@ -13,17 +13,18 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Fotos do Trabalho</h5>
-          <form (submit)="postarFoto($event)">
+          <form>
             <div class="input-group mb-3">
-              <input type="file" class="form-control custom-file-input" id="photoInput" [(ngModel)]="selectedFile">
+              <input type="file" class="form-control custom-file-input" id="photoInput" (change)="onChange($event)">
             </div>
-            <button type="submit" class="btn btn-primary">Postar</button>
+            <button type="submit" class="btn btn-primary" (click)="postarFoto()">Postar</button>
           </form>
         </div>
       </div>
     </div>
   </div>
   <div class="row mt-5">
+    s
     <div class="col">
       <div class="row row-cols-1 row-cols-md-3 g-3">
         <div class="col" *ngFor="let usuarioServImg of usuarioServImgs">
