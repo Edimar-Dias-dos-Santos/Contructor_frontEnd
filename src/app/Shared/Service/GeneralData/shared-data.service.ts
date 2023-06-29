@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SharedDataService {
   private userEmail: string = '';
+  private idUsuario: string = '';
 
   constructor() { }
 
@@ -14,6 +15,15 @@ export class SharedDataService {
 
   getUserEmail(): string {
     return this.userEmail;
+  }
+
+  setidUsuario(id: string)
+  {
+    this.idUsuario = id;
+  }
+
+  getidUsuario(): string{
+    return this.idUsuario;
   }
 }
 

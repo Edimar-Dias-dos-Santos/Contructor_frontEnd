@@ -1,32 +1,17 @@
 <div class="container mt-5">
-    <h1 class="custom-heading">Reclamações e sugestões</h1>
-    <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Reclamação 1</h5>
-            <p class="card-text">Descrição da reclamação 1.</p>
-            <button class="btn btn-danger delete-btn" onclick="deleteCard(this)"><i class="fas fa-trash"></i></button>
-          </div>
+  <h1 class="custom-heading">Reclamações e sugestões</h1>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let sugestao of sugestoes">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ sugestao.nome }}</h5>
+          <p class="card-text">{{ sugestao.descricao }}</p>
+          <button class="btn btn-danger delete-btn" (click)="deleteSugestaoAdm(sugestao.idSugestaoAdm)">
+            <i class="fas fa-trash"></i>
+          </button>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Reclamação 2</h5>
-            <p class="card-text">Descrição da reclamação 2.</p>
-            <button class="btn btn-danger delete-btn"><i class="fas fa-trash"></i></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Reclamação 3</h5>
-            <p class="card-text">Descrição da reclamação 3.</p>
-            <button class="btn btn-danger delete-btn"><i class="fas fa-trash"></i></button>
-          </div>
-        </div>
-      </div>
-      <!-- Adicione mais cards aqui -->
     </div>
+  </div>
+</div>

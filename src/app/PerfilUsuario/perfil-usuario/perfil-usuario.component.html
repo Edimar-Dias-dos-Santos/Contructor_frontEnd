@@ -1,44 +1,44 @@
 <section>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <!-- Profile Picture -->
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid rounded-circle">
-            </div>
-            <div class="col-lg-8 col-md-6 mb-4">
-                <!-- Profile Name -->
-                <h1 class="mb-3">Edimar</h1>
-                <!-- Profile Information -->
-                <ul class="list-unstyled mb-4">
-                    <li><strong>Contato:</strong> 51 98857-0252</li>
-                    <li><strong>E-mail:</strong> eddy.development1997@gmail.com</li>
-                    <li><strong>Descrição:</strong> Software Engineer at Example Inc.</li>
-                </ul>
-            </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <!-- Profile Picture -->
+          <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid rounded-circle">
         </div>
-    </div>
-    <hr>
-    <hr>
-    <hr>
-
-
-    <div class="d-flex justify-content-center">
-        <table class="table table-dark table-sm table-bordered text-center">
-          <tbody>
-            <tr>
-              <th scope="row"><i class="fas fa-phone"></i></th>
-              <td>51 98857-0252</td>
-            </tr>
-            <tr>
-              <th scope="row"><i class="fas fa-envelope"></i></th>
-              <td>eddy.development1997@gmail.com</td>
-            </tr>
-            <tr>
-              <th scope="row"><i class="fas fa-info-circle"></i></th>
-              <td>Software Engineer at Example Inc.</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="col-lg-8 col-md-6 mb-4">
+          <!-- Profile Name -->
+          <h1 class="mb-3">{{ usuarioAtual?.nome }}</h1>
+          <!-- Profile Information -->
+          <ul class="list-unstyled mb-4">
+            <li><strong>Contato:</strong> {{ usuarioAtual?.telefone }}</li>
+            <li><strong>E-mail:</strong> {{ usuarioAtual?.email }}</li>
+            <li><strong>Descrição:</strong> Software Engineer at Example Inc.</li>
+          </ul>
+        </div>
       </div>
-   
-</section>
+    </div>
+  
+    <hr>
+  
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Editar Nome</h3>
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="nomeEditado" placeholder="Digite o nome">
+          </div>
+          <button class="btn btn-primary" (click)="atualizarUsuario()">Salvar</button>
+        </div>
+        <div class="col-md-6">
+          <h3>Editar Telefone</h3>
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="telefoneEditado" placeholder="Digite o telefone">
+          </div>
+          <button class="btn btn-primary" (click)="atualizarUsuario()">Salvar</button>
+        </div>
+      </div>
+    </div>
+  
+    <hr>
+  
+  </section>

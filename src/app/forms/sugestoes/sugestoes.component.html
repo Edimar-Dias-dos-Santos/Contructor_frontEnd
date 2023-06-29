@@ -1,15 +1,15 @@
 <section style="display: flex; justify-content: center; align-items: center;">
     <div class="container">
         <h1>Formulário de Sugestões</h1>
-        <form>
+        <form (ngSubmit)="criarSugestao()">
             <div class="form-group">
                 <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required [(ngModel)]="novaSugestao.nome">
             </div>
            
             <div class="form-group">
                 <label for="suggestion">Sugestão:</label>
-                <textarea id="suggestion" name="suggestion" required></textarea>
+                <textarea id="suggestion" name="suggestion" required [(ngModel)]="novaSugestao.descricao"></textarea>
             </div>
             <div class="form-group">
                 <button type="submit">Enviar</button>
