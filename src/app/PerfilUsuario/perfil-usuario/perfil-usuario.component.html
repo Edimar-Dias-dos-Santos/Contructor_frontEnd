@@ -1,43 +1,44 @@
 <section>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <!-- Profile Picture -->
-          <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid rounded-circle">
-        </div>
-        <div class="col-lg-8 col-md-6 mb-4">
-          <!-- Profile Name -->
-          <h1 class="mb-3">{{ usuarioAtual?.nome }}</h1>
-          <!-- Profile Information -->
-          <ul class="list-unstyled mb-4">
-            <li><strong>Contato:</strong> {{ usuarioAtual?.telefone }}</li>
-            <li><strong>E-mail:</strong> {{ usuarioAtual?.email }}</li>
-          </ul>
-        </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <!-- Profile Picture -->
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid rounded-circle">
+      </div>
+      <div class="col-lg-8 col-md-12 mb-4">
+        <!-- Profile Name -->
+        <h1 class="mb-3">{{ usuarioAtual?.nome }}</h1>
+        <!-- Profile Information -->
+        <ul class="list-unstyled mb-4">
+          <li><strong>Contato:</strong> {{ usuarioAtual?.telefone }}</li>
+          <li><strong>E-mail:</strong> {{ usuarioAtual?.email }}</li>
+        </ul>
       </div>
     </div>
-  
-    <hr>
-  
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-md-6">
-          <h3>Editar Nome</h3>
-          <div class="form-group">
-            <input type="text" class="form-control" [(ngModel)]="nomeEditado" placeholder="Digite o nome">
-          </div>
-          <button class="btn btn-primary" (click)="atualizarUsuario()">Salvar</button>
+  </div>
+
+  <hr>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h3>Editar Nome</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="nomeEditado" placeholder="Digite o nome">
         </div>
-        <div class="col-md-6">
-          <h3>Editar Telefone</h3>
-          <div class="form-group">
-            <input type="text" class="form-control" [(ngModel)]="telefoneEditado" placeholder="Digite o telefone">
-          </div>
-          <button class="btn btn-primary" (click)="atualizarUsuario()">Salvar</button>
-        </div>
+        <button class="btn btn-primary" (click)="atualizarUsuario()">Salvar</button>
       </div>
     </div>
-  
-    <hr>
-  
-  </section>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Editar Telefone</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="telefoneEditado" placeholder="Digite o telefone">
+        </div>
+        <button class="btn btn-primary" (click)="atualizarUsuario()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+</section>

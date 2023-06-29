@@ -24,10 +24,9 @@
     </div>
   </div>
   <div class="row mt-5">
-    s
     <div class="col">
-      <div class="row row-cols-1 row-cols-md-3 g-3">
-        <div class="col" *ngFor="let usuarioServImg of usuarioServImgs">
+      <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-end">
+        <div class="col-md-4" *ngFor="let usuarioServImg of usuarioServImgs">
           <div class="card">
             <img [src]="usuarioServImg.url" class="card-img-top" [alt]="usuarioServImg.idUsuarioServImg">
             <button class="btn btn-danger delete-btn" (click)="excluirFoto(usuarioServImg.idUsuarioServImg)" data-toggle="tooltip" data-placement="top" title="Excluir">

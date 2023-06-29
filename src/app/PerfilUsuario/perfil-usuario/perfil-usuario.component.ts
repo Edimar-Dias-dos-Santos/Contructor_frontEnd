@@ -27,7 +27,7 @@ export class PerfilUsuarioComponent implements OnInit {
   }
 
   obterUsuarioAtual(): void {
-    debugger
+   
     const idUsuarioAtual = localStorage.getItem('idUsuario');
 
     if (idUsuarioAtual) {
