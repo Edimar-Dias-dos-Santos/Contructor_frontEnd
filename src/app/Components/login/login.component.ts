@@ -4,7 +4,6 @@ import { ServLoginServiceService } from 'src/app/Shared/Service/serv-login-servi
 import { ServLoginConstructoAdmService } from 'src/app/Shared/Service/serv-login-constructo-adm.service';
 import Swal from 'sweetalert2';
 import { Login } from 'src/app/Shared/Model/Login';
-import { SharedDataService } from 'src/app/Shared/Service/GeneralData/shared-data.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +15,6 @@ export class LoginComponent {
   constructor(
     private loginService: ServLoginServiceService,
     private loginAdmService: ServLoginConstructoAdmService,
-    private sharedDataService: SharedDataService,
     private router: Router
   ) { }
 
@@ -24,51 +22,32 @@ export class LoginComponent {
     this.loginAdmService.authenticateUser(username, password)
       .subscribe(
         () => {
-          this.handleAdminAuthenticationSuccess();
+          Swal.fire('Atenção!', 'Sou autenticarUsuarioAdm', 'success').then(() => {
+            this.router.navigate(['/ConstructorADM']);
+          });
         },
         (error) => {
-          this.handleUserAuthenticationError(username, password);
-        }
-      );
-  }
-
-  private handleAdminAuthenticationSuccess(): void {
-    Swal.fire('Atenção!', 'Sou autenticarUsuarioAdm', 'success').then(() => {
-      this.router.navigateByUrl('/ConstructorADM');
-    });
-  }
-
-  private handleUserAuthenticationError(username: string, password: string): void {
-    this.loginService.authenticateUser(username, password)
-      .subscribe(
-        (login: Login) => {
-          // Retrieve the complete login object by its ID
-          this.loginService.getLoginById(login.idLogin)
+          this.loginService.authenticateUser(username, password)
             .subscribe(
-              (completeLogin: Login) => {
-                // Save the idUsuario in local storage
-                localStorage.setItem('idUsuario', completeLogin.codigoLogado.toString());
-  
-                this.handleUserAuthenticationSuccess();
+              (login: Login) => {
+                this.loginService.getLoginById(login.idLogin)
+                  .subscribe(
+                    (completeLogin: Login) => {
+                      localStorage.setItem('idUsuario', completeLogin.codigoLogado.toString());
+                      Swal.fire('Atenção!', 'Seja bem-vindo', 'success').then(() => {
+                        this.router.navigate(['/PerfilUsuario']);
+                      });
+                    },
+                    (error) => {
+                      alert('Eu não existo!');
+                    }
+                  );
               },
               (error) => {
-                this.handleAuthenticationFailure();
+                alert('Eu não existo!');
               }
             );
-        },
-        (error) => {
-          this.handleAuthenticationFailure();
         }
       );
-  }
-
-  private handleUserAuthenticationSuccess(): void {
-    Swal.fire('Atenção!', 'Sou autenticarUsuario', 'success').then(() => {
-      this.router.navigateByUrl('/PerfilUsuario');
-    });
-  }
-
-  private handleAuthenticationFailure(): void {
-    alert('Eu não existo!');
   }
 }
