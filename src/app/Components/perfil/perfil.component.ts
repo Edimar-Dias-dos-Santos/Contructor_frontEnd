@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Avaliacao } from 'src/app/Shared/Model/Avaliacao';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
+import { ServiceAvaliacaoService } from 'src/app/Shared/Service/service-avalicao.service';
 
 @Component({
   selector: 'app-perfil',
@@ -10,15 +12,17 @@ import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
 export class PerfilComponent implements OnInit {
 
   servicoUsuario = {} as ServUsuario;
+  serviceAvaliacaoService = {} as ServiceAvaliacaoService;
 
   usuario = {} as Usuario;
+  avaliacoes: Avaliacao[] = [];
 
 
-  constructor(public servUsuario: ServUsuario,) {
-  }
+  constructor(public servUsuario: ServUsuario, 
+                     serviceAvaliacaoService: ServiceAvaliacaoService) {}
 
   ngOnInit(): void {
-    debugger
+ 
     this.recuperaUsuario();
   }
 
@@ -30,6 +34,18 @@ export class PerfilComponent implements OnInit {
         this.usuario = resp;
       });
     } 
+  }
+
+  recuPeraAvaliacoes(): void{
+    const idUser = localStorage.getItem('idUsuario');
+
+    if(idUser !== null)
+    {
+       this.serviceAvaliacaoService.getAvaliacaoByUsuarioId(idUser).subscribe((resp)=> {
+       this.avaliacoes = resp; });
+    }
+
+
   }
 
 

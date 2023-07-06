@@ -8,12 +8,16 @@ import { Avaliacao } from '../Model/Avaliacao';
 })
 export class ServiceAvaliacaoService {
 
-  private apiUrl = '/api/avaliacoes'; // Defina a URL do seu endpoint
-
+  private apiUrl = '/api/avaliacoes'; 
   constructor(private http: HttpClient) { }
 
   getAllAvaliacoes(): Observable<Avaliacao[]> {
     return this.http.get<Avaliacao[]>(this.apiUrl);
+  }
+
+  getAvaliacaoByUsuarioId(idUsuario: string): Observable<Avaliacao[]> {
+    const url = `${this.apiUrl}/usuario/${idUsuario}`;
+    return this.http.get<Avaliacao[]>(url);
   }
 
   getAvaliacaoById(id: string): Observable<Avaliacao> {
