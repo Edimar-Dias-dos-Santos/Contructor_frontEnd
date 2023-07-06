@@ -75,39 +75,63 @@
         </div>
     </div>
     <div>
-        <div class="container my-5">
-            <div class="row mt-4">
-
-                <!-- cards aqui -->
-                <div class="col-md-4" style="padding-bottom:2rem ;" id="Pedreiro">
-                    <div class="card pointer" routerLink="perfil">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
-                        <div class="card-body">
-                            <h5 class="card-title">Marcos</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <label>Pedreiro</label>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i
-                                        class="fab fa-whatsapp"></i> WhatsApp</a>
-                                <div>
-                                    <h5 class="review-stat">12 Viewers</h5>
-                                    <div class="small-ratings">
-                                        <span class="fa fa-star fa-lg text-warning"></span>
-                                        <span class="fa fa-star fa-lg text-warning"></span>
-                                        <span class="fa fa-star fa-lg text-warning"></span>
-                                        <span class="fa fa-star fa-lg text-warning"></span>
-                                        <span class="fa fa-star fa-lg text-warning"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <div class="container my-5">
+        <div class="row mt-4">
+          <div class="col-md-4" style="padding-bottom: 2rem;">
+            <div class="card pointer">
+              <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="category">
+              <div class="card-body">
+                <h5 class="card-title">Marcos</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <label>Pedreiro</label>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <div>
+                    <h5 class="review-stat">12 Viewers</h5>
+                    <div class="small-ratings">
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
                     </div>
+                  </div>
                 </div>
-                <!-- Outros cards aqui -->
-
-
+              </div>
             </div>
+          </div>
+      
+          <!-- Outros cards aqui -->
+          <div class="col-md-4" *ngFor="let usuario of Usuarios" style="padding-bottom: 2rem;" [id]="usuario.profissao">
+            <div class="card pointer">
+              <img [src]="usuario.urlPerfil || 'https://via.placeholder.com/350x200'" class="card-img-top" alt="category">
+              <div class="card-body">
+                <h5 class="card-title">{{ usuario.nome }}</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <label>{{ usuario.profissao }}</label>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a [href]="'https://wa.me/' + usuario.telefone" target="_blank" class="btn btn-success">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                  <button (click)="AbrirDetalhesUsuario(usuario.idUsuario)">
+                    Mais detalhes
+                  </button>
+                  <div>
+                    <h5 class="review-stat">12 Viewers</h5>
+                    <div class="small-ratings">
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                      <span class="fa fa-star fa-lg text-warning"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
 
         <hr>

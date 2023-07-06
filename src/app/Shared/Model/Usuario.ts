@@ -5,6 +5,8 @@ export interface Usuario {
     nome: string;
     telefone: string;
     email: string;
+    profissao?: string;
+    urlPerfil?:string
 
 }
 

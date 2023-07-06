@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { Usuario } from 'src/app/Shared/Model/Usuario';
 import { ServUsuario } from 'src/app/Shared/Service/serv-usuario.service';
 import Swal from 'sweetalert2';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -13,10 +13,12 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit, AfterViewInit {
   Usuarios: Usuario[] = [];
 
+
   constructor(
     public servUsuario: ServUsuario,
     private elementRef: ElementRef,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public routaPadrao : Router
   ) { }
 
   ngOnInit(): void {
@@ -32,6 +34,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     
   }
+
+AbrirDetalhesUsuario(id: string): void {
+  localStorage.setItem('idUsuario', id);
+  this.routaPadrao.navigate(['perfil']);
+}
 
   getUsuarios() {
     this.servUsuario.getUsuarios().subscribe((data: Usuario[]) => {

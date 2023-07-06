@@ -17,13 +17,12 @@
             </div>
             <div class="col-lg-8 col-md-6 mb-4">
                 <!-- Profile Name -->
-                <h1 class="mb-3">Pedro</h1>
+                <h1 class="mb-3">{{ usuario.nome }}</h1>
                 <!-- Profile Information -->
                 <ul class="list-unstyled mb-4">
-                    <li><strong>Contato:</strong> 51 98857-0252</li>
-                    <li><strong>E-mail:</strong> Exemplo@gmail.com</li>
-                    <li><strong>Cidade:</strong> Críciuma</li>
-                    <li><strong>Descrição:</strong> Software Engineer at Example Inc.</li>
+                    <li><strong>Contato:</strong>{{ usuario.telefone }}</li>
+                    <li><strong>E-mail:</strong> {{usuario.email}}</li>
+                    <li><strong>Especialidade:</strong>{{usuario.profissao}} </li>
                 </ul>
 
                 <div>
@@ -37,17 +36,17 @@
                     </div>
                 </div>
 
-                <b>Especialidade:</b>
+                <b>serviços que eu faço:</b>
                 <ul class="list-unstyled mb-4">
                     <li>PINTOR;</li>
                 </ul>
                 <!-- Profile Buttons -->
+                <!--{{ usuario.telefone }}-->
                 <div class="d-flex">
-                    <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success mr-2 mx-2"><i
-                            class="fab fa-whatsapp"></i>
-                        WhatsApp</a>
-                    <button class="btn btn-outline-primary ml-2"><i class="fas fa-star"></i> Adicionar aos
-                        favoritos</button>
+                    <a [href]="'https://wa.me/' + usuario.telefone" target="_blank" class="btn btn-success mr-2 mx-2">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                      </a>
+                    
                 </div>
             </div>
         </div>
@@ -74,11 +73,11 @@
                     <img src="https://via.placeholder.com/800x400?text=Imagem+3" class="d-block w-100" alt="Imagem 3">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+            <a class="carousel-control-prev"  role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+            <a class="carousel-control-next"  role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </a>
