@@ -20,6 +20,7 @@ import { UsuarioimgPerfilComponent } from 'src/app/PerfilUsuario/usuarioimg-perf
 import {ConstructorADMComponent} from 'src/app/constructorADM/constructor-adm/constructor-adm.component'
 import {PerfilUsuarioComponent} from 'src/app/PerfilUsuario/perfil-usuario/perfil-usuario.component';
 import { CliFornecCrudComponent } from 'src/app/PerfilUsuario/cli-fornec-crud/cli-fornec-crud.component';
+import { AvalicaoComponent } from 'src/app/PerfilUsuario/avalicao/avalicao.component';
 
 
 
@@ -106,6 +107,10 @@ const routes: Routes = [
   {
     path: "CliFornecCrud",
     component: CliFornecCrudComponent
+  },
+  {
+    path: "Avalicao",
+    component: AvalicaoComponent
   }
 ];
 
