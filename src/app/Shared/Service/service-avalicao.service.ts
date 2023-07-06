@@ -8,7 +8,7 @@ import { Avaliacao } from '../Model/Avaliacao';
 })
 export class ServiceAvaliacaoService {
 
-  private apiUrl = '/api/avaliacoes'; 
+  private apiUrl = 'http://localhost:8080/api/avaliacoes'; 
   constructor(private http: HttpClient) { }
 
   getAllAvaliacoes(): Observable<Avaliacao[]> {

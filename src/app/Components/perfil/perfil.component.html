@@ -101,40 +101,41 @@
 
                <!-- Formulário para feedBack -->
                 <!-- Formulário para feedback -->
-                <h3 class="text-center mb-4">Deixe seu Comentário</h3>
-                <form (ngSubmit)="criarAvaliacao()">
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" required [(ngModel)]="nome">
-                </div>
-                <div class="mb-3">
-                    <label for="comentario" class="form-label">Comentário</label>
-                    <textarea class="form-control" id="comentario" rows="3" required [(ngModel)]="descricao"></textarea>
-                </div>
-                <fieldset class="border p-2 mb-4">
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="rating" id="rating1" value="1" [(ngModel)]="nota">
-                    <label class="form-check-label" for="rating1"><i class="far fa-star"><strong>1</strong></i></label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="rating" id="rating2" value="2" [(ngModel)]="nota">
-                    <label class="form-check-label" for="rating2"><i class="far fa-star"><strong>2</strong></i></label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="rating" id="rating3" value="3" [(ngModel)]="nota">
-                    <label class="form-check-label" for="rating3"><i class="far fa-star"><strong>3</strong></i></label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="rating" id="rating4" value="4" [(ngModel)]="nota">
-                    <label class="form-check-label" for="rating4"><i class="far fa-star"><strong>4</strong></i></label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="rating" id="rating5" value="5" [(ngModel)]="nota">
-                    <label class="form-check-label" for="rating5"><i class="far fa-star"><strong>5</strong></i></label>
-                    </div>
-                </fieldset>
-                <button type="submit" class="btn btn-primary">Enviar Comentário</button>
-                </form>
+ <!-- Formulário para feedback -->
+<h3 class="text-center mb-4">Deixe seu Comentário</h3>
+<form>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="nome" name="nome" required [(ngModel)]="nome">
+  </div>
+  <div class="mb-3">
+    <label for="comentario" class="form-label">Comentário</label>
+    <textarea class="form-control" id="comentario" name="comentario" rows="3" required [(ngModel)]="descricao"></textarea>
+  </div>
+  <fieldset class="border p-2 mb-4">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="rating" id="rating1" value="1" [(ngModel)]="nota" required>
+      <label class="form-check-label" for="rating1"><i class="far fa-star"><strong>1</strong></i></label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="rating" id="rating2" value="2" [(ngModel)]="nota">
+      <label class="form-check-label" for="rating2"><i class="far fa-star"><strong>2</strong></i></label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="rating" id="rating3" value="3" [(ngModel)]="nota">
+      <label class="form-check-label" for="rating3"><i class="far fa-star"><strong>3</strong></i></label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="rating" id="rating4" value="4" [(ngModel)]="nota">
+      <label class="form-check-label" for="rating4"><i class="far fa-star"><strong>4</strong></i></label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="rating" id="rating5" value="5" [(ngModel)]="nota">
+      <label class="form-check-label" for="rating5"><i class="far fa-star"><strong>5</strong></i></label>
+    </div>
+  </fieldset>
+  <button type="submit" class="btn btn-primary"  (click)="criarAvaliacao()">Enviar Comentário</button>
+</form>
         </div>
     </div>
     <hr>

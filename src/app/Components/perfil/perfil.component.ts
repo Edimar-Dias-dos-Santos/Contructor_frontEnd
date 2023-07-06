@@ -11,8 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./perfil.component.scss']
 })
 export class PerfilComponent implements OnInit {
-  servicoUsuario = {} as ServUsuario;
-  serviceAvaliacaoService = {} as ServiceAvaliacaoService;
+
 
   usuario = {} as Usuario;
   avaliacoes: Avaliacao[] = [];
@@ -20,9 +19,12 @@ export class PerfilComponent implements OnInit {
   descricao = '';
   nota = 0;
 
-  constructor(public servUsuario: ServUsuario, serviceAvaliacaoService: ServiceAvaliacaoService) {}
+  constructor(public servUsuario: ServUsuario,
+               public serviceAvaliacaoService: ServiceAvaliacaoService) {}
+
 
   ngOnInit(): void {
+ 
     this.recuperaUsuario();
     this.recuPeraAvaliacoes();
   }
@@ -48,6 +50,7 @@ export class PerfilComponent implements OnInit {
   }
 
   criarAvaliacao(): void {
+ 
     const idUsuario = localStorage.getItem('idUsuario');
     const novaAvaliacao: Avaliacao = {
       id: '',
